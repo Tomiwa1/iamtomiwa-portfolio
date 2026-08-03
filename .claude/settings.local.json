@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s -A \"Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0 Safari/537.36\" https://iamtomiwa.framer.website -o home.html -w \"HTTP %{http_code}, size %{size_download} bytes\\\\n\")"
+    ]
+  }
+}
