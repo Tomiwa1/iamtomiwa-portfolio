@@ -48,14 +48,14 @@
 		}
 	}
 
-	var queued = false;
+	// Run synchronously rather than via requestAnimationFrame: rAF never fires while
+	// the tab is backgrounded, so a page opened in a background tab would never get
+	// the link. `running` stops our own insertion from re-entering the observer.
+	var running = false;
 	function schedule() {
-		if (queued) return;
-		queued = true;
-		requestAnimationFrame(function () {
-			queued = false;
-			inject();
-		});
+		if (running) return;
+		running = true;
+		try { inject(); } finally { running = false; }
 	}
 
 	function start() {

@@ -1,0 +1,170 @@
+/*
+ * Shared styling for the standalone policy pages (about-us, contact-us,
+ * refund-policy, privacy-policy, terms).
+ *
+ * Mirrors the design of the Framer-exported pages: same font faces, same
+ * palette tokens, same header/footer treatment. Kept as one file so the five
+ * pages can't drift apart.
+ */
+
+/* ---- Fonts (the same faces the rest of the site loads) ---- */
+@font-face { font-family: "Onest"; src: url("../fonts/gNMKW3F-SZuj7xmf-HY.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Onest"; src: url("../fonts/gNMZW3F-SZuj7zOT0IfSjTS16cPhxx-ZtxFMQWXgSQ.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Onest"; src: url("../fonts/gNMZW3F-SZuj7zOT0IfSjTS16cPhKxiZtxFMQWXgSQ.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Onest"; src: url("../fonts/gNMKW3F-SZuj7xmf-HY.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("../fonts/GrgcKwrN6d3Uz8EwcLHZxwEfC4.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("../fonts/d3tHnaQIAeqiE5hGcRw4mmgWYU.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("../fonts/DXD0Q7LSl7HEvDzucnyLnGBHM.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Fragment Mono"; src: url("../fonts/4iCr6K5wfMRRjxp0DA6-2CLnB4NHhg.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+
+:root {
+	--white: #fff;
+	--black: #000;
+	--grey-dark: #333;
+	--grey: #b3b3b3;
+	--grey-light: #f5f5f5;
+	--accent: #ed4337;
+	--sans: "Onest", -apple-system, BlinkMacSystemFont, sans-serif;
+	--ui: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+	--mono: "Fragment Mono", ui-monospace, monospace;
+	--max: 1200px;
+	--pad: 36px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+	margin: 0;
+	background: var(--white);
+	color: var(--black);
+	font-family: var(--ui);
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; }
+
+.wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
+
+/* ---- Header ---- */
+.site-header { position: sticky; top: 0; z-index: 20; background: var(--white); border-bottom: 1px solid var(--grey-light); }
+.site-header .wrap { display: flex; align-items: center; gap: 10px; padding-top: 30px; padding-bottom: 30px; }
+.logo { font-family: var(--sans); font-size: 30px; font-weight: 700; line-height: 1.1em; text-decoration: none; }
+.site-nav { flex: 1; display: flex; justify-content: flex-end; align-items: center; gap: 30px; }
+.site-nav a { font-size: 18px; font-weight: 500; text-decoration: none; transition: color .4s cubic-bezier(.44,0,.56,1); }
+.site-nav a:hover { color: var(--grey); }
+.site-nav a[aria-current="page"] { color: var(--grey); }
+
+/* ---- Document head ---- */
+.doc-head { padding: 96px 0 56px; border-bottom: 1px solid var(--grey-light); }
+.eyebrow { font-family: var(--mono); font-size: 14px; font-weight: 400; letter-spacing: .18em; text-transform: uppercase; color: var(--grey-dark); margin: 0 0 24px; }
+.doc-head h1 { font-family: var(--sans); font-weight: 500; font-size: clamp(38px, 5.4vw, 66px); line-height: 1.06; letter-spacing: -.02em; margin: 0 0 24px; max-width: 16ch; }
+.doc-head .lede { margin: 0; max-width: 62ch; font-size: 20px; line-height: 1.6; color: var(--grey-dark); }
+.updated { font-family: var(--mono); font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--grey); margin: 32px 0 0; }
+
+/* ---- Prose ---- */
+.doc { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 64px; padding: 64px 0 96px; }
+.toc { position: sticky; top: 120px; align-self: start; }
+.toc p { font-family: var(--mono); font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--grey); margin: 0 0 18px; }
+.toc ol { list-style: none; margin: 0; padding: 0; counter-reset: toc; }
+.toc li { counter-increment: toc; margin-bottom: 12px; }
+.toc a { font-size: 15px; text-decoration: none; color: var(--grey-dark); transition: color .3s ease; }
+.toc a::before { content: counter(toc, decimal-leading-zero) "  "; font-family: var(--mono); font-size: 12px; color: var(--grey); }
+.toc a:hover { color: var(--black); }
+
+.prose { max-width: 70ch; }
+.prose section { padding-bottom: 44px; }
+.prose section + section { border-top: 1px solid var(--grey-light); padding-top: 44px; }
+.prose h2 { font-family: var(--sans); font-weight: 500; font-size: 30px; line-height: 1.2; letter-spacing: -.01em; margin: 0 0 18px; scroll-margin-top: 120px; }
+.prose h3 { font-family: var(--sans); font-weight: 500; font-size: 20px; margin: 30px 0 10px; }
+.prose p { margin: 0 0 18px; font-size: 17px; line-height: 1.65; color: var(--grey-dark); }
+.prose p strong, .prose li strong { color: var(--black); font-weight: 700; }
+.prose ul { list-style: none; margin: 0 0 20px; padding: 0; }
+.prose li { position: relative; padding-left: 26px; margin-bottom: 12px; font-size: 17px; line-height: 1.6; color: var(--grey-dark); }
+.prose li::before { content: ""; position: absolute; left: 4px; top: 11px; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+.prose a { color: var(--black); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.prose a:hover { color: var(--accent); }
+
+/* Key/value block for business details */
+.details { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px; margin: 0 0 28px; padding: 32px; border: 1px solid var(--grey-light); border-radius: 16px; }
+.details div { min-width: 0; }
+.details dt { font-family: var(--mono); font-size: 12.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--grey); margin-bottom: 8px; }
+.details dd { margin: 0; font-size: 17px; line-height: 1.5; overflow-wrap: break-word; }
+
+/* Anything still needing the real business data. Deliberately loud. */
+.fill-me {
+	display: inline-block;
+	background: #fff4c2;
+	border-bottom: 2px solid var(--accent);
+	padding: 1px 7px;
+	border-radius: 3px;
+	font-family: var(--mono);
+	font-size: .88em;
+	letter-spacing: .02em;
+	color: #6b4e00;
+}
+
+.callout { margin: 0 0 28px; padding: 24px 28px; background: var(--grey-light); border-radius: 14px; }
+.callout p { margin: 0; font-size: 16px; color: var(--grey-dark); }
+.callout p + p { margin-top: 12px; }
+
+/* ---- Footer ---- */
+.site-footer { background: var(--black); color: var(--white); }
+.site-footer .wrap { padding-top: 96px; padding-bottom: 56px; display: flex; flex-direction: column; gap: 64px; }
+.footer-social { display: flex; gap: 26px; }
+.footer-social a { font-size: 18px; font-weight: 500; text-decoration: none; transition: color .4s cubic-bezier(.44,0,.56,1); }
+.footer-social a:hover { color: var(--grey); }
+.footer-cta h2 {
+	font-family: var(--sans); font-weight: 500;
+	font-size: clamp(28px, 4vw, 44px); line-height: 1.2; margin: 0 0 36px; max-width: 22ch;
+	background: linear-gradient(95deg, #fff 37%, #383838 95%);
+	-webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.footer-actions { display: flex; align-items: center; gap: 40px; flex-wrap: wrap; }
+.footer-btn { background: var(--white); color: var(--black); padding: 20px 36px; border-radius: 4px; font-size: 18px; font-weight: 500; text-decoration: none; transition: opacity .3s ease; }
+.footer-btn:hover { opacity: .85; }
+.available { display: flex; align-items: center; gap: 16px; font-size: 16px; }
+.pulse { position: relative; width: 10px; height: 10px; flex: none; }
+.pulse span { position: absolute; inset: 0; border-radius: 50%; background: var(--white); }
+.pulse span:last-child { animation: pulse 2s cubic-bezier(.44,0,.56,1) infinite; }
+@keyframes pulse { 0% { transform: scale(1); opacity: .8 } 100% { transform: scale(3.2); opacity: 0 } }
+
+.footer-legal { display: flex; flex-wrap: wrap; gap: 12px 28px; padding-top: 36px; border-top: 1px solid #1f1f1f; }
+.footer-legal a { font-size: 15px; text-decoration: none; color: #8a8a8a; transition: color .3s ease; }
+.footer-legal a:hover { color: var(--white); }
+.footer-legal a[aria-current="page"] { color: var(--white); }
+.footer-note { font-family: var(--mono); font-size: 13px; color: #5a5a5a; letter-spacing: .04em; margin: 0; }
+
+/* ---- Responsive ---- */
+@media (max-width: 1199.98px) {
+	:root { --pad: 30px; }
+	.site-header .wrap { padding-top: 24px; padding-bottom: 24px; }
+	.doc { grid-template-columns: 200px minmax(0, 1fr); gap: 44px; }
+	.doc-head { padding-top: 72px; }
+}
+@media (max-width: 899.98px) {
+	.doc { grid-template-columns: 1fr; gap: 0; }
+	.toc { position: static; padding-bottom: 44px; border-bottom: 1px solid var(--grey-light); margin-bottom: 44px; }
+	.toc ol { columns: 2; column-gap: 32px; }
+}
+@media (max-width: 809.98px) {
+	:root { --pad: 20px; }
+	body { font-size: 17px; }
+	.site-header { position: static; }
+	.site-header .wrap { flex-direction: column; align-items: flex-start; gap: 14px; padding-top: 20px; padding-bottom: 18px; }
+	.logo { font-size: 24px; }
+	.site-nav { flex: none; width: 100%; justify-content: flex-start; flex-wrap: wrap; gap: 8px 18px; }
+	.site-nav a { font-size: 15px; }
+	.doc-head { padding: 48px 0 40px; }
+	.doc-head .lede { font-size: 18px; }
+	.doc { padding: 44px 0 72px; }
+	.toc ol { columns: 1; }
+	.prose h2 { font-size: 25px; }
+	.details { padding: 24px; gap: 22px; }
+	.site-footer .wrap { padding-top: 64px; gap: 44px; }
+}
+@media (prefers-reduced-motion: reduce) {
+	*, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+}
