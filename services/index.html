@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Services — Samuel Akinbode</title>
+	<meta name="description" content="Design and build packages with clear, fixed pricing. Landing pages, full websites with SEO, and end-to-end product work.">
+	<link rel="canonical" href="https://iamtomiwa.xyz/services/">
+
+	<link href="../assets/images/7CuiOHMfw9RIwUMCsUOfT5E0pM.png" rel="icon">
+	<link rel="apple-touch-icon" href="../assets/images/7CuiOHMfw9RIwUMCsUOfT5E0pM.png">
+
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://iamtomiwa.xyz/services/">
+	<meta property="og:title" content="Services — Samuel Akinbode">
+	<meta property="og:description" content="Design and build packages with clear, fixed pricing.">
+	<meta property="og:image" content="../assets/images/PAQxxkMRn2ftGR6Q9jmeh1kCQk.png">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Services — Samuel Akinbode">
+	<meta name="twitter:description" content="Design and build packages with clear, fixed pricing.">
+	<meta name="twitter:image" content="../assets/images/PAQxxkMRn2ftGR6Q9jmeh1kCQk.png">
+
+	<style>
+		/* ---- Fonts (same faces the rest of the site uses) ---- */
+		@font-face { font-family: "Onest"; src: url("../assets/fonts/gNMKW3F-SZuj7xmf-HY.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+		@font-face { font-family: "Onest"; src: url("../assets/fonts/gNMZW3F-SZuj7zOT0IfSjTS16cPhxx-ZtxFMQWXgSQ.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+		@font-face { font-family: "Onest"; src: url("../assets/fonts/gNMZW3F-SZuj7zOT0IfSjTS16cPhKxiZtxFMQWXgSQ.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+		@font-face { font-family: "Onest"; src: url("../assets/fonts/gNMKW3F-SZuj7xmf-HY.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+		@font-face { font-family: "Inter"; src: url("../assets/fonts/GrgcKwrN6d3Uz8EwcLHZxwEfC4.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+		@font-face { font-family: "Inter"; src: url("../assets/fonts/d3tHnaQIAeqiE5hGcRw4mmgWYU.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+		@font-face { font-family: "Inter"; src: url("../assets/fonts/DXD0Q7LSl7HEvDzucnyLnGBHM.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+		@font-face { font-family: "Fragment Mono"; src: url("../assets/fonts/4iCr6K5wfMRRjxp0DA6-2CLnB4NHhg.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+
+		/* ---- Tokens lifted from the site ---- */
+		:root {
+			--white: #fff;
+			--black: #000;
+			--grey-dark: #333;
+			--grey: #b3b3b3;
+			--grey-light: #f5f5f5;
+			--accent: #ed4337;
+			--sans: "Onest", -apple-system, BlinkMacSystemFont, sans-serif;
+			--ui: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+			--mono: "Fragment Mono", ui-monospace, monospace;
+			--max: 1200px;
+			--pad: 36px;
+		}
+
+		*, *::before, *::after { box-sizing: border-box; }
+		html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+		body {
+			margin: 0;
+			background: var(--white);
+			color: var(--black);
+			font-family: var(--ui);
+			font-size: 18px;
+			font-weight: 500;
+			line-height: 1.5;
+			-webkit-font-smoothing: antialiased;
+		}
+		img, svg { display: block; max-width: 100%; }
+		a { color: inherit; }
+
+		.wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
+
+		/* ---- Header ---- */
+		.site-header {
+			position: sticky; top: 0; z-index: 20;
+			background: var(--white);
+			border-bottom: 1px solid var(--grey-light);
+		}
+		.site-header .wrap { display: flex; align-items: center; gap: 10px; padding-top: 30px; padding-bottom: 30px; }
+		.logo { font-family: var(--sans); font-size: 30px; font-weight: 700; line-height: 1.1em; text-decoration: none; }
+		.site-nav { flex: 1; display: flex; justify-content: flex-end; align-items: center; gap: 30px; }
+		.site-nav a { font-size: 18px; font-weight: 500; text-decoration: none; transition: color .4s cubic-bezier(.44,0,.56,1); }
+		.site-nav a:hover { color: var(--grey); }
+		.site-nav a[aria-current="page"] { color: var(--grey); }
+
+		/* ---- Hero ---- */
+		.hero { padding: 120px 0 72px; }
+		.eyebrow {
+			font-family: var(--mono); font-size: 14px; font-weight: 400;
+			letter-spacing: .18em; text-transform: uppercase; color: var(--grey-dark);
+			margin: 0 0 28px;
+		}
+		.hero h1 {
+			font-family: var(--sans); font-weight: 500;
+			font-size: clamp(40px, 6.2vw, 76px); line-height: 1.05; letter-spacing: -.02em;
+			margin: 0 0 28px; max-width: 15ch;
+		}
+		.hero p { margin: 0; max-width: 56ch; font-size: 20px; color: var(--grey-dark); line-height: 1.6; }
+		.hero-meta {
+			display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px;
+		}
+		.chip {
+			font-family: var(--mono); font-size: 13px; letter-spacing: .06em; text-transform: uppercase;
+			border: 1px solid var(--grey-light); border-radius: 999px; padding: 10px 18px; color: var(--grey-dark);
+		}
+
+		/* ---- Cards ---- */
+		.tiers {
+			display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px;
+			align-items: start; /* an expanded card must not stretch its neighbour */
+			padding-bottom: 96px;
+		}
+		.tier {
+			display: flex; flex-direction: column;
+			border: 1px solid var(--grey-light); border-radius: 20px;
+			background: var(--white); overflow: hidden;
+			transition: border-color .35s ease, transform .35s ease;
+		}
+		.tier:hover { border-color: var(--black); }
+		.tier-thumb { position: relative; background: var(--grey-light); }
+		/* height:auto is required — the width/height attrs would otherwise pin height to 400px */
+		.tier-thumb img { width: 100%; height: auto; }
+		.tag {
+			position: absolute; top: 18px; right: 18px;
+			font-family: var(--mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase;
+			background: var(--accent); color: var(--white); border-radius: 999px; padding: 7px 14px;
+		}
+		.tier-body { display: flex; flex-direction: column; flex: 1; padding: 32px; }
+		.tier-index {
+			font-family: var(--mono); font-size: 13px; letter-spacing: .14em; text-transform: uppercase;
+			color: var(--grey); margin: 0 0 14px;
+		}
+		.tier h2 { font-family: var(--sans); font-weight: 500; font-size: 32px; line-height: 1.15; letter-spacing: -.01em; margin: 0 0 10px; }
+		.tier-pitch { margin: 0 0 24px; color: var(--grey-dark); font-size: 17px; line-height: 1.55; }
+		.price { display: flex; align-items: baseline; gap: 10px; margin: 0 0 26px; }
+		.price .amount { font-family: var(--sans); font-weight: 600; font-size: 44px; line-height: 1; letter-spacing: -.02em; }
+		.price .unit { font-family: var(--mono); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--grey); }
+
+		/* accordion */
+		.toggle {
+			appearance: none; -webkit-appearance: none;
+			display: flex; align-items: center; justify-content: space-between; gap: 12px;
+			width: 100%; margin-top: auto; padding: 16px 0; cursor: pointer;
+			background: none; border: 0; border-top: 1px solid var(--grey-light);
+			font-family: var(--ui); font-size: 16px; font-weight: 500; color: inherit; text-align: left;
+		}
+		.toggle .caret { transition: transform .35s cubic-bezier(.44,0,.56,1); flex: none; }
+		.toggle[aria-expanded="true"] .caret { transform: rotate(180deg); }
+		.panel { flex: none; height: 0; overflow: hidden; transition: height .4s cubic-bezier(.44,0,.56,1); }
+		.panel p { margin: 0 0 18px; font-size: 16px; line-height: 1.6; color: var(--grey-dark); }
+		.panel ul { list-style: none; margin: 0 0 20px; padding: 0; }
+		.panel li { position: relative; padding: 0 0 0 26px; margin-bottom: 11px; font-size: 16px; line-height: 1.5; }
+		.panel li::before {
+			content: ""; position: absolute; left: 4px; top: 9px;
+			width: 7px; height: 7px; border-radius: 50%; background: var(--accent);
+		}
+		.facts { display: flex; flex-wrap: wrap; gap: 10px 28px; padding: 0 0 24px; }
+		.fact { font-family: var(--mono); font-size: 12.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--grey); }
+		.fact b { display: block; font-family: var(--ui); font-size: 15px; font-weight: 500; letter-spacing: 0; text-transform: none; color: var(--black); margin-top: 4px; }
+
+		.book {
+			display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+			margin-top: 4px; align-self: flex-start;
+			padding: 18px 32px; border-radius: 999px;
+			background: var(--black); color: var(--white);
+			font-family: var(--ui); font-size: 17px; font-weight: 500; text-decoration: none;
+			transition: opacity .3s ease, transform .3s ease;
+		}
+		.book:hover { opacity: .82; transform: translateY(-1px); }
+		.book .arrow { transition: transform .3s ease; }
+		.book:hover .arrow { transform: translateX(4px); }
+
+		/* featured (dark) card */
+		.tier--dark { background: var(--black); border-color: var(--black); color: var(--white); }
+		.tier--dark .tier-thumb { background: #0a0a0a; }
+		.tier--dark .tier-pitch { color: var(--grey); }
+		.tier--dark .tier-index { color: #6a6a6a; }
+		.tier--dark .toggle { border-top-color: #262626; }
+		.tier--dark .panel p { color: var(--grey); }
+		.tier--dark .fact { color: #6a6a6a; }
+		.tier--dark .fact b { color: var(--white); }
+		.tier--dark .book { background: var(--white); color: var(--black); }
+
+		/* ---- Process ---- */
+		.process { border-top: 1px solid var(--grey-light); padding: 88px 0 96px; }
+		.process h2 { font-family: var(--sans); font-weight: 500; font-size: clamp(30px, 4vw, 44px); line-height: 1.15; letter-spacing: -.02em; margin: 0 0 56px; max-width: 18ch; }
+		.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+		.step h3 { font-family: var(--sans); font-weight: 500; font-size: 22px; margin: 18px 0 10px; }
+		.step p { margin: 0; color: var(--grey-dark); font-size: 16px; line-height: 1.6; }
+		.step-num { font-family: var(--mono); font-size: 13px; letter-spacing: .14em; color: var(--grey); border-top: 1px solid var(--black); padding-top: 16px; display: block; }
+
+		/* ---- Footer ---- */
+		.site-footer { background: var(--black); color: var(--white); }
+		.site-footer .wrap { padding-top: 100px; padding-bottom: 60px; display: flex; flex-direction: column; gap: 72px; }
+		.footer-social { display: flex; gap: 26px; }
+		.footer-social a { font-size: 18px; font-weight: 500; text-decoration: none; transition: color .4s cubic-bezier(.44,0,.56,1); }
+		.footer-social a:hover { color: var(--grey); }
+		.footer-cta h2 {
+			font-family: var(--sans); font-weight: 500;
+			font-size: clamp(30px, 4.4vw, 48px); line-height: 1.2; margin: 0 0 40px; max-width: 22ch;
+			background: linear-gradient(95deg, #fff 37%, #383838 95%);
+			-webkit-background-clip: text; background-clip: text; color: transparent;
+		}
+		.footer-actions { display: flex; align-items: center; gap: 40px; flex-wrap: wrap; }
+		.footer-btn {
+			background: var(--white); color: var(--black);
+			padding: 20px 36px; border-radius: 4px;
+			font-size: 18px; font-weight: 500; text-decoration: none;
+			transition: opacity .3s ease;
+		}
+		.footer-btn:hover { opacity: .85; }
+		.available { display: flex; align-items: center; gap: 16px; font-size: 16px; }
+		.pulse { position: relative; width: 10px; height: 10px; flex: none; }
+		.pulse span { position: absolute; inset: 0; border-radius: 50%; background: var(--white); }
+		.pulse span:last-child { animation: pulse 2s cubic-bezier(.44,0,.56,1) infinite; }
+		@keyframes pulse { 0% { transform: scale(1); opacity: .8 } 100% { transform: scale(3.2); opacity: 0 } }
+		.footer-note { font-family: var(--mono); font-size: 13px; color: #5a5a5a; letter-spacing: .04em; }
+
+		/* ---- Responsive ---- */
+		@media (max-width: 1199.98px) {
+			:root { --pad: 30px; }
+			.site-header .wrap { padding-top: 24px; padding-bottom: 24px; }
+			.hero { padding: 88px 0 60px; }
+		}
+		@media (max-width: 899.98px) {
+			.tiers { grid-template-columns: 1fr; gap: 24px; }
+			.steps { grid-template-columns: 1fr; gap: 32px; }
+		}
+		@media (max-width: 809.98px) {
+			:root { --pad: 20px; }
+			body { font-size: 17px; }
+			/* Five links don't fit one row on a phone — stack them under the logo. */
+			.site-header { position: static; }
+			.site-header .wrap { flex-direction: column; align-items: flex-start; gap: 14px; padding-top: 20px; padding-bottom: 18px; }
+			.logo { font-size: 24px; }
+			.site-nav { flex: none; width: 100%; justify-content: flex-start; flex-wrap: wrap; gap: 8px 18px; }
+			.site-nav a { font-size: 15px; }
+			.hero { padding: 64px 0 48px; }
+			.hero p { font-size: 18px; }
+			.tier-body { padding: 26px 22px; }
+			.tier h2 { font-size: 27px; }
+			.price .amount { font-size: 38px; }
+			.site-footer .wrap { padding-top: 72px; gap: 52px; }
+			.footer-actions { gap: 24px; }
+		}
+		@media (prefers-reduced-motion: reduce) {
+			*, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+			html { scroll-behavior: auto; }
+		}
+	</style>
+</head>
+<body>
+
+<header class="site-header">
+	<div class="wrap">
+		<a class="logo" href="../index.html">Samuel</a>
+		<nav class="site-nav">
+			<a href="../works/index.html">Works</a>
+			<a href="../case-studies/index.html">Case Studies</a>
+			<a href="../about/index.html">About</a>
+			<a href="index.html" aria-current="page">Services</a>
+			<a href="../contact/index.html">Contact</a>
+		</nav>
+	</div>
+</header>
+
+<main>
+	<section class="hero">
+		<div class="wrap">
+			<p class="eyebrow">Services</p>
+			<h1>Design that earns its keep.</h1>
+			<p>Pick a package, tell me about the project, and we start. Fixed scope, fixed price, no open-ended invoices — and everything ships ready to hand to a developer or go live as-is.</p>
+			<div class="hero-meta">
+				<span class="chip">Fixed pricing</span>
+				<span class="chip">Design + build</span>
+				<span class="chip">Start within a week</span>
+			</div>
+		</div>
+	</section>
+
+	<section class="wrap">
+		<div class="tiers">
+
+			<!-- 01 -->
+			<article class="tier" id="landing-page">
+				<div class="tier-thumb">
+					<img src="../assets/images/services/tier-landing.svg" alt="A single landing page laid out in a browser window" loading="lazy" width="640" height="400">
+				</div>
+				<div class="tier-body">
+					<p class="tier-index">01 — Landing Page</p>
+					<h2>Single Page Design</h2>
+					<p class="tier-pitch">One page, built to convert. Perfect for a launch, a waitlist, or a product that needs to explain itself in thirty seconds.</p>
+					<div class="price"><span class="amount">$350</span><span class="unit">one-time</span></div>
+
+					<button class="toggle" type="button" aria-expanded="false" aria-controls="panel-1">
+						<span>What's included</span>
+						<svg class="caret" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+					</button>
+					<div class="panel" id="panel-1" role="region" aria-labelledby="landing-page">
+						<div>
+							<p>We start with a short call to get clear on who the page is for and what one action it should drive. Then I design it, section by section, until it reads like the obvious next click.</p>
+							<ul>
+								<li>Discovery call + goal and audience alignment</li>
+								<li>One custom landing page — desktop and mobile</li>
+								<li>Content structure and copy direction</li>
+								<li>Clickable prototype so you can feel it before it's built</li>
+								<li>Developer-ready Figma handoff, or shipped live in Framer</li>
+								<li>2 rounds of revisions</li>
+							</ul>
+							<div class="facts">
+								<span class="fact">Timeline<b>5–7 days</b></span>
+								<span class="fact">Revisions<b>2 rounds</b></span>
+								<span class="fact">Deliverable<b>Figma + live page</b></span>
+							</div>
+						</div>
+					</div>
+
+					<a class="book" href="mailto:tomiwa1.dev@gmail.com?subject=Booking%3A%20Single%20Page%20Design%20(%24350)&amp;body=Hi%20Samuel%2C%0D%0A%0D%0AI'd%20like%20to%20book%20the%20Single%20Page%20Design%20package%20(%24350).%0D%0A%0D%0AWhat%20the%20page%20is%20for%3A%20%0D%0AIdeal%20launch%20date%3A%20%0D%0AAny%20references%20or%20existing%20links%3A%20%0D%0A%0D%0AThanks%2C">Book this <span class="arrow" aria-hidden="true">→</span></a>
+				</div>
+			</article>
+
+			<!-- 02 -->
+			<article class="tier" id="website-seo">
+				<div class="tier-thumb">
+					<img src="../assets/images/services/tier-seo.svg" alt="A multi-page website next to search results and a rising ranking chart" loading="lazy" width="640" height="400">
+				</div>
+				<div class="tier-body">
+					<p class="tier-index">02 — Website + SEO</p>
+					<h2>Full Website &amp; SEO</h2>
+					<p class="tier-pitch">A complete site people can actually find. Designed for how visitors read, built for how search engines crawl.</p>
+					<div class="price"><span class="amount">$500</span><span class="unit">one-time</span></div>
+
+					<button class="toggle" type="button" aria-expanded="false" aria-controls="panel-2">
+						<span>What's included</span>
+						<svg class="caret" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+					</button>
+					<div class="panel" id="panel-2" role="region" aria-labelledby="website-seo">
+						<div>
+							<p>Everything in the landing page package, scaled up to a real site — plus the technical groundwork that decides whether anyone ever sees it.</p>
+							<ul>
+								<li>Up to 5 pages, designed desktop and mobile</li>
+								<li>Sitemap and information architecture</li>
+								<li>Keyword research — 10–15 terms worth ranking for</li>
+								<li>On-page SEO: titles, meta, headings, alt text, schema</li>
+								<li>Speed and Core Web Vitals pass</li>
+								<li>Google Analytics + Search Console set up and verified</li>
+								<li>3 rounds of revisions</li>
+							</ul>
+							<div class="facts">
+								<span class="fact">Timeline<b>2–3 weeks</b></span>
+								<span class="fact">Revisions<b>3 rounds</b></span>
+								<span class="fact">Pages<b>Up to 5</b></span>
+							</div>
+						</div>
+					</div>
+
+					<a class="book" href="mailto:tomiwa1.dev@gmail.com?subject=Booking%3A%20Full%20Website%20%26%20SEO%20(%24500)&amp;body=Hi%20Samuel%2C%0D%0A%0D%0AI'd%20like%20to%20book%20the%20Full%20Website%20%26%20SEO%20package%20(%24500).%0D%0A%0D%0AWhat%20the%20business%20does%3A%20%0D%0APages%20I%20think%20I%20need%3A%20%0D%0AIdeal%20launch%20date%3A%20%0D%0AExisting%20site%2C%20if%20any%3A%20%0D%0A%0D%0AThanks%2C">Book this <span class="arrow" aria-hidden="true">→</span></a>
+				</div>
+			</article>
+
+			<!-- 03 -->
+			<article class="tier tier--dark" id="the-works">
+				<div class="tier-thumb">
+					<img src="../assets/images/services/tier-works.svg" alt="A full website system: site connected to design system, CMS, SEO and analytics modules" loading="lazy" width="640" height="400">
+					<span class="tag">Most booked</span>
+				</div>
+				<div class="tier-body">
+					<p class="tier-index">03 — The Works</p>
+					<h2>Everything, Shipped</h2>
+					<p class="tier-pitch">The full stack: site, SEO, a design system you can grow with, and a CMS so you're not emailing me every time you want to publish a post.</p>
+					<div class="price"><span class="amount">$1,000</span><span class="unit">one-time</span></div>
+
+					<button class="toggle" type="button" aria-expanded="false" aria-controls="panel-3">
+						<span>What's included</span>
+						<svg class="caret" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+					</button>
+					<div class="panel" id="panel-3" role="region" aria-labelledby="the-works">
+						<div>
+							<p>Everything in Full Website &amp; SEO, plus the parts that keep a site useful six months after launch — the system behind it, the content engine, and the numbers that tell you it's working.</p>
+							<ul>
+								<li>Everything in Full Website &amp; SEO</li>
+								<li>Up to 10 pages</li>
+								<li>Custom design system + reusable component library</li>
+								<li>CMS setup so you can publish and edit yourself</li>
+								<li>Copywriting support across every page</li>
+								<li>Conversion tracking and event setup</li>
+								<li>Loom walkthrough of how to run the whole thing</li>
+								<li>30 days of post-launch support</li>
+								<li>Unlimited revisions within scope</li>
+							</ul>
+							<div class="facts">
+								<span class="fact">Timeline<b>3–4 weeks</b></span>
+								<span class="fact">Support<b>30 days post-launch</b></span>
+								<span class="fact">Pages<b>Up to 10</b></span>
+							</div>
+						</div>
+					</div>
+
+					<a class="book" href="mailto:tomiwa1.dev@gmail.com?subject=Booking%3A%20Everything%2C%20Shipped%20(%241%2C000)&amp;body=Hi%20Samuel%2C%0D%0A%0D%0AI'd%20like%20to%20book%20the%20Everything%2C%20Shipped%20package%20(%241%2C000).%0D%0A%0D%0AWhat%20the%20business%20does%3A%20%0D%0AWhat%20success%20looks%20like%20for%20this%20site%3A%20%0D%0AIdeal%20launch%20date%3A%20%0D%0AExisting%20site%2C%20if%20any%3A%20%0D%0A%0D%0AThanks%2C">Book this <span class="arrow" aria-hidden="true">→</span></a>
+				</div>
+			</article>
+
+			<!-- 04 -->
+			<article class="tier" id="custom">
+				<div class="tier-thumb">
+					<img src="../assets/images/services/tier-custom.svg" alt="Modular blocks inside a dashed frame, representing a custom scoped engagement" loading="lazy" width="640" height="400">
+				</div>
+				<div class="tier-body">
+					<p class="tier-index">04 — Custom</p>
+					<h2>Something Bigger</h2>
+					<p class="tier-pitch">Product work, ongoing design support, or a project that doesn't fit in a box. We scope it together and price it once we both know what it is.</p>
+					<div class="price"><span class="amount">Let's talk</span></div>
+
+					<button class="toggle" type="button" aria-expanded="false" aria-controls="panel-4">
+						<span>What this covers</span>
+						<svg class="caret" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 7l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+					</button>
+					<div class="panel" id="panel-4" role="region" aria-labelledby="custom">
+						<div>
+							<p>Some work doesn't end at launch. If you're building a product, rebuilding a platform, or you need a designer in the room every week, this is the one. Scoped per project or billed monthly as a retainer.</p>
+							<ul>
+								<li>End-to-end product design — web and mobile app</li>
+								<li>Design systems built to scale across a team</li>
+								<li>UX audits and redesigns of existing products</li>
+								<li>Monthly retainer with agreed availability</li>
+								<li>Working sessions with your engineers, async in between</li>
+								<li>Priority turnaround on everything</li>
+							</ul>
+							<div class="facts">
+								<span class="fact">Timeline<b>Scoped together</b></span>
+								<span class="fact">Engagement<b>Project or retainer</b></span>
+								<span class="fact">Starts with<b>A 30-min call</b></span>
+							</div>
+						</div>
+					</div>
+
+					<a class="book" href="mailto:tomiwa1.dev@gmail.com?subject=Project%20enquiry%3A%20Custom%20engagement&amp;body=Hi%20Samuel%2C%0D%0A%0D%0AI'd%20like%20to%20talk%20about%20a%20custom%20project.%0D%0A%0D%0AWhat%20we're%20building%3A%20%0D%0AWhere%20it%20is%20today%3A%20%0D%0ATimeline%20and%20budget%20range%3A%20%0D%0AHow%20to%20reach%20me%3A%20%0D%0A%0D%0AThanks%2C">Start a conversation <span class="arrow" aria-hidden="true">→</span></a>
+				</div>
+			</article>
+
+		</div>
+	</section>
+
+	<section class="process">
+		<div class="wrap">
+			<h2>Three steps from here to live.</h2>
+			<div class="steps">
+				<div class="step">
+					<span class="step-num">01</span>
+					<h3>Pick and send</h3>
+					<p>Choose the package that fits, hit the button, and tell me what you're building. I reply within a day with a yes, a question, or a better suggestion.</p>
+				</div>
+				<div class="step">
+					<span class="step-num">02</span>
+					<h3>Design in the open</h3>
+					<p>You see the work as it happens — not one big reveal at the end. Feedback goes in as we go, so nothing gets built twice.</p>
+				</div>
+				<div class="step">
+					<span class="step-num">03</span>
+					<h3>Ship it</h3>
+					<p>You get the files, the live site, or both — plus a walkthrough so you know exactly how to run it without me.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+
+<footer class="site-footer">
+	<div class="wrap">
+		<div class="footer-social">
+			<a href="https://www.linkedin.com/in/tomiwaakinbode?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=ios_app" target="_blank" rel="noopener">Linkedin</a>
+			<a href="https://www.behance.net/Tomiwa" target="_blank" rel="noopener">Behance</a>
+		</div>
+		<div class="footer-cta">
+			<h2>Curious about what we can create together? Let's bring something extraordinary to life!</h2>
+			<div class="footer-actions">
+				<a class="footer-btn" href="../contact/index.html">Get in Touch</a>
+				<span class="available">
+					<span class="pulse" aria-hidden="true"><span></span><span></span></span>
+					Available For Work
+				</span>
+			</div>
+		</div>
+		<p class="footer-note">© Samuel Akinbode — iamtomiwa.xyz</p>
+	</div>
+</footer>
+
+<script>
+	document.querySelectorAll('.tier .toggle').forEach(function (btn) {
+		var card = btn.closest('.tier');
+		var panel = document.getElementById(btn.getAttribute('aria-controls'));
+		var inner = panel.firstElementChild;
+
+		btn.addEventListener('click', function () {
+			var open = btn.getAttribute('aria-expanded') === 'true';
+			btn.setAttribute('aria-expanded', String(!open));
+			card.classList.toggle('is-open', !open);
+
+			// Always animate from a concrete pixel height, never from `auto`.
+			panel.style.height = inner.offsetHeight + 'px';
+			if (open) {
+				void panel.offsetHeight; // force a reflow so the collapse animates
+				panel.style.height = '0px';
+			}
+		});
+
+		// Once open, release to `auto` so the panel reflows on resize.
+		panel.addEventListener('transitionend', function (e) {
+			if (e.propertyName === 'height' && btn.getAttribute('aria-expanded') === 'true') {
+				panel.style.height = 'auto';
+			}
+		});
+	});
+</script>
+
+</body>
+</html>

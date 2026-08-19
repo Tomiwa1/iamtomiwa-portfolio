@@ -1,0 +1,62 @@
+<svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A full website system: a site connected to a design system, CMS, SEO and analytics modules">
+  <rect width="640" height="400" fill="#0a0a0a"/>
+
+  <!-- connective lines -->
+  <g fill="none" stroke="#3a3a3a" stroke-width="1.5">
+    <path d="M240 128h-84v-38"/>
+    <path d="M240 200H132"/>
+    <path d="M240 272h-84v38"/>
+    <path d="M400 128h84v-38"/>
+    <path d="M400 200h108"/>
+    <path d="M400 272h84v38"/>
+  </g>
+
+  <!-- centre: the site -->
+  <rect x="240" y="88" width="160" height="224" rx="14" fill="#141414" stroke="#fff" stroke-width="1.5"/>
+  <path d="M240 120h160" stroke="#fff" stroke-width="1.5"/>
+  <circle cx="258" cy="104" r="3.5" fill="#ed4337"/>
+  <circle cx="270" cy="104" r="3.5" fill="#4a4a4a"/>
+  <rect x="262" y="146" width="88" height="12" rx="6" fill="#fff"/>
+  <rect x="262" y="168" width="62" height="12" rx="6" fill="#fff"/>
+  <rect x="262" y="196" width="104" height="6" rx="3" fill="#5a5a5a"/>
+  <rect x="262" y="210" width="80" height="6" rx="3" fill="#5a5a5a"/>
+  <rect x="262" y="234" width="70" height="24" rx="12" fill="#ed4337"/>
+  <rect x="262" y="276" width="36" height="18" rx="6" fill="none" stroke="#4a4a4a" stroke-width="1.5"/>
+  <rect x="306" y="276" width="36" height="18" rx="6" fill="none" stroke="#4a4a4a" stroke-width="1.5"/>
+  <rect x="350" y="276" width="36" height="18" rx="6" fill="none" stroke="#4a4a4a" stroke-width="1.5"/>
+
+  <!-- module: design system -->
+  <rect x="66" y="62" width="90" height="56" rx="10" fill="#141414" stroke="#4a4a4a" stroke-width="1.5"/>
+  <circle cx="92" cy="90" r="9" fill="#fff"/>
+  <rect x="108" y="81" width="30" height="8" rx="4" fill="#4a4a4a"/>
+  <rect x="108" y="95" width="20" height="8" rx="4" fill="#4a4a4a"/>
+
+  <!-- module: CMS -->
+  <rect x="42" y="172" width="90" height="56" rx="10" fill="#141414" stroke="#4a4a4a" stroke-width="1.5"/>
+  <rect x="60" y="188" width="54" height="7" rx="3.5" fill="#fff"/>
+  <rect x="60" y="202" width="40" height="6" rx="3" fill="#4a4a4a"/>
+  <rect x="60" y="213" width="46" height="6" rx="3" fill="#4a4a4a"/>
+
+  <!-- module: SEO -->
+  <rect x="66" y="282" width="90" height="56" rx="10" fill="#141414" stroke="#4a4a4a" stroke-width="1.5"/>
+  <circle cx="90" cy="308" r="10" fill="none" stroke="#fff" stroke-width="1.5"/>
+  <path d="M97.5 315.5l8 8" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+  <rect x="116" y="304" width="24" height="8" rx="4" fill="#4a4a4a"/>
+
+  <!-- module: analytics -->
+  <rect x="484" y="62" width="90" height="56" rx="10" fill="#141414" stroke="#4a4a4a" stroke-width="1.5"/>
+  <rect x="502" y="96" width="12" height="10" rx="3" fill="#4a4a4a"/>
+  <rect x="520" y="86" width="12" height="20" rx="3" fill="#4a4a4a"/>
+  <rect x="538" y="76" width="12" height="30" rx="3" fill="#fff"/>
+  <rect x="556" y="88" width="12" height="18" rx="3" fill="#ed4337"/>
+
+  <!-- module: copy -->
+  <rect x="508" y="172" width="90" height="56" rx="10" fill="#141414" stroke="#4a4a4a" stroke-width="1.5"/>
+  <rect x="526" y="188" width="54" height="6" rx="3" fill="#4a4a4a"/>
+  <rect x="526" y="199" width="48" height="6" rx="3" fill="#4a4a4a"/>
+  <rect x="526" y="210" width="30" height="6" rx="3" fill="#fff"/>
+
+  <!-- module: support -->
+  <rect x="484" y="282" width="90" height="56" rx="10" fill="#141414" stroke="#4a4a4a" stroke-width="1.5"/>
+  <path d="M508 296h42a6 6 0 0 1 6 6v12a6 6 0 0 1-6 6h-24l-12 10v-10h-6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6z" fill="none" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/>
+</svg>

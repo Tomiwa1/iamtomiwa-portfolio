@@ -1,0 +1,36 @@
+<svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Modular blocks inside a dashed frame, representing a custom scoped engagement">
+  <rect width="640" height="400" fill="#f5f5f5"/>
+
+  <!-- dashed scope frame -->
+  <rect x="88" y="56" width="464" height="288" rx="16" fill="#fff" stroke="#000" stroke-width="1.5" stroke-dasharray="10 10"/>
+
+  <!-- modules -->
+  <rect x="124" y="94" width="128" height="88" rx="10" fill="#000"/>
+  <rect x="144" y="118" width="66" height="8" rx="4" fill="#fff"/>
+  <rect x="144" y="134" width="44" height="8" rx="4" fill="#5a5a5a"/>
+  <rect x="144" y="152" width="54" height="8" rx="4" fill="#5a5a5a"/>
+
+  <rect x="268" y="94" width="104" height="88" rx="10" fill="#fff" stroke="#000" stroke-width="1.5"/>
+  <circle cx="300" cy="126" r="12" fill="none" stroke="#000" stroke-width="1.5"/>
+  <rect x="286" y="150" width="68" height="7" rx="3.5" fill="#b3b3b3"/>
+  <rect x="286" y="163" width="48" height="7" rx="3.5" fill="#b3b3b3"/>
+
+  <rect x="388" y="94" width="128" height="88" rx="10" fill="#ed4337"/>
+  <path d="M452 118v40M432 138h40" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+
+  <rect x="124" y="198" width="104" height="106" rx="10" fill="#fff" stroke="#000" stroke-width="1.5"/>
+  <rect x="144" y="222" width="64" height="7" rx="3.5" fill="#000"/>
+  <rect x="144" y="240" width="46" height="6" rx="3" fill="#b3b3b3"/>
+  <rect x="144" y="254" width="56" height="6" rx="3" fill="#b3b3b3"/>
+  <rect x="144" y="274" width="40" height="16" rx="8" fill="#f5f5f5"/>
+
+  <rect x="244" y="198" width="128" height="106" rx="10" fill="#fff" stroke="#000" stroke-width="1.5" stroke-dasharray="8 8"/>
+  <path d="M308 232v38M289 251h38" stroke="#000" stroke-width="3" stroke-linecap="round"/>
+
+  <rect x="388" y="198" width="128" height="106" rx="10" fill="#fff" stroke="#000" stroke-width="1.5"/>
+  <rect x="408" y="222" width="88" height="7" rx="3.5" fill="#b3b3b3"/>
+  <rect x="408" y="238" width="70" height="7" rx="3.5" fill="#b3b3b3"/>
+  <rect x="408" y="266" width="24" height="24" rx="12" fill="#000"/>
+  <rect x="438" y="266" width="24" height="24" rx="12" fill="#fff" stroke="#000" stroke-width="1.5"/>
+  <rect x="468" y="266" width="24" height="24" rx="12" fill="#ed4337"/>
+</svg>
