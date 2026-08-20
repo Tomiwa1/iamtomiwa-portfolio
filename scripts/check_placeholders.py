@@ -18,7 +18,7 @@ PAGES = [
     'refund-policy/index.html',
     'privacy-policy/index.html',
     'terms/index.html',
-    'services/index.html',
+    'policies/index.html',
 ]
 
 PLACEHOLDER = re.compile(r'\[\[\s*([^\]]+?)\s*\]\]')

@@ -13,11 +13,8 @@
 	var MARK = 'legal-links-row';
 
 	var LINKS = [
-		['About Us', 'about-us/index.html'],
-		['Contact Us', 'contact-us/index.html'],
-		['Refund Policy', 'refund-policy/index.html'],
-		['Privacy Policy', 'privacy-policy/index.html'],
-		['Terms and Conditions', 'terms/index.html']
+		['Policies, Terms and Conditions', 'policies/index.html'],
+		['Services', 'services/index.html']
 	];
 
 	function addStyles() {

@@ -78,6 +78,11 @@ a { color: inherit; }
 .prose section { padding-bottom: 44px; }
 .prose section + section { border-top: 1px solid var(--grey-light); padding-top: 44px; }
 .prose h2 { font-family: var(--sans); font-weight: 500; font-size: 30px; line-height: 1.2; letter-spacing: -.01em; margin: 0 0 18px; scroll-margin-top: 120px; }
+
+/* Major parts of the combined policies page */
+.prose section.part { scroll-margin-top: 120px; }
+.prose section.part h2 { font-size: 40px; margin-bottom: 26px; }
+.part-label { font-family: var(--mono); font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin: 0 0 12px; }
 .prose h3 { font-family: var(--sans); font-weight: 500; font-size: 20px; margin: 30px 0 10px; }
 .prose p { margin: 0 0 18px; font-size: 17px; line-height: 1.65; color: var(--grey-dark); }
 .prose p strong, .prose li strong { color: var(--black); font-weight: 700; }
