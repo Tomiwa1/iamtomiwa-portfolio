@@ -2,11 +2,11 @@
 """Load legal-links.js on every Framer-exported page, at the bodyEnd marker."""
 
 PAGES = {
-    'index.html': ('assets/js/legal-links.js', ''),
-    'about/index.html': ('../assets/js/legal-links.js', '../'),
-    'works/index.html': ('../assets/js/legal-links.js', '../'),
-    'case-studies/index.html': ('../assets/js/legal-links.js', '../'),
-    'contact/index.html': ('../assets/js/legal-links.js', '../'),
+    'index.html': ('assets/js/legal-links.js?v=2', ''),
+    'about/index.html': ('../assets/js/legal-links.js?v=2', '../'),
+    'works/index.html': ('../assets/js/legal-links.js?v=2', '../'),
+    'case-studies/index.html': ('../assets/js/legal-links.js?v=2', '../'),
+    'contact/index.html': ('../assets/js/legal-links.js?v=2', '../'),
 }
 
 MARKER = '<!-- Start of bodyEnd -->'
