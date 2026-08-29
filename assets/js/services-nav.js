@@ -12,6 +12,27 @@
 	var LABEL = 'Services';
 	var MARK = 'services-nav-item';
 
+	// Depth of this page, derived from the Services path we were handed
+	// ("../../services/index.html" -> "../../").
+	var BASE = HREF.replace(/services\/index\.html$/, '');
+
+	// Framer's router rewrites nav hrefs to its own route paths ("../works"),
+	// which on this static mirror resolve to /works/works and 404 on a new tab
+	// or a shared link. Point them back at real files.
+	var NAV_TARGETS = {
+		'Works': 'works/index.html',
+		'About': 'about/index.html',
+		'Contact': 'contact/index.html'
+	};
+
+	function repairNav(link, label) {
+		var target = NAV_TARGETS[label];
+		if (!target) return;
+		var href = link.getAttribute('href') || '';
+		if (href.indexOf(BASE + target) === 0 || /index\.html$/.test(href)) return;
+		link.setAttribute('href', BASE + target);
+	}
+
 	// Clone the "About" item so the new one inherits Framer's generated classes,
 	// text presets and hover transitions exactly.
 	function addAfter(aboutLink) {
@@ -40,11 +61,21 @@
 		item.parentNode.insertBefore(clone, item.nextSibling);
 	}
 
+	// Case Studies is archived — the section no longer exists in the site's
+	// information architecture, so drop it from the Framer-rendered nav too.
+	function removeArchived(link) {
+		var item = link.closest('[data-framer-component-type="RichTextContainer"]');
+		if (item && item.parentNode) item.remove();
+	}
+
 	function inject() {
 		var links = document.querySelectorAll('nav a');
 		for (var i = 0; i < links.length; i++) {
 			var link = links[i];
-			if (link.textContent.trim() === 'About' && !link.closest('.' + MARK)) addAfter(link);
+			var label = link.textContent.trim();
+			if (label === 'Case Studies') { removeArchived(link); continue; }
+			repairNav(link, label);
+			if (label === 'About' && !link.closest('.' + MARK)) addAfter(link);
 		}
 	}
 

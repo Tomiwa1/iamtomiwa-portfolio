@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Klærus — Samuel Akinbode</title>
+	<meta name="description" content="Designing a probability perpetuals protocol on Arbitrum: showing traders the exact payout before they enter, and keeping them in control until they decide the trade ends.">
+	<link rel="canonical" href="https://iamtomiwa.xyz/works/klaerus/">
+	<link href="../../assets/images/7CuiOHMfw9RIwUMCsUOfT5E0pM.png" rel="icon">
+	<link rel="apple-touch-icon" href="../../assets/images/7CuiOHMfw9RIwUMCsUOfT5E0pM.png">
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="https://iamtomiwa.xyz/works/klaerus/">
+	<meta property="og:title" content="Klærus — Probability perpetuals, designed for control">
+	<meta property="og:description" content="A perps protocol where you see the exact payout before you enter — no leverage, no funding rate, no liquidation cascades.">
+	<meta property="og:image" content="../../assets/images/klaerus/card-poster.jpg">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="../../assets/images/klaerus/card-poster.jpg">
+	<link rel="stylesheet" href="../../assets/css/site.css?v=2">
+	<link rel="stylesheet" href="../../assets/css/case-study.css?v=9">
+</head>
+<body class="cs-klaerus">
+
+<header class="site-header">
+	<div class="wrap">
+		<a class="logo" href="../../index.html">Samuel</a>
+		<nav class="site-nav">
+			<a href="../index.html">Works</a>
+			<a href="../../about/index.html">About</a>
+			<a href="../../services/index.html">Services</a>
+			<a href="../../contact/index.html">Contact</a>
+		</nav>
+	</div>
+</header>
+
+<main>
+	<div class="wrap">
+
+		<div class="doc-head cs-head">
+			<p class="eyebrow">Probability Perpetuals · Arbitrum</p>
+			<h1>Klærus</h1>
+			<p class="lede">A perps protocol built on one idea: you should know exactly what you stand to win or lose <em>before</em> you enter a trade — and stay in control of it until you decide it ends. No leverage. No funding rate. No liquidation cascades.</p>
+
+			<a class="live-link" href="https://klaerus.xyz" target="_blank" rel="noopener">
+				<span class="dot" aria-hidden="true"></span>
+				See Live
+			</a>
+
+			<dl class="cs-meta">
+				<div>
+					<dt>Role</dt>
+					<dd>Product Designer</dd>
+				</div>
+				<div>
+					<dt>Scope</dt>
+					<dd>Trading interface, payout model, marketing site</dd>
+				</div>
+				<div>
+					<dt>Chain</dt>
+					<dd>Arbitrum One · USDT settlement</dd>
+				</div>
+				<div>
+					<dt>Year</dt>
+					<dd>2026</dd>
+				</div>
+				<div>
+					<dt>Status</dt>
+					<dd>Closed beta</dd>
+				</div>
+			</dl>
+		</div>
+
+		<figure class="media media--hero">
+			<video src="../../assets/videos/klaerus-card.mp4"
+			       poster="../../assets/images/klaerus/card-poster.jpg"
+			       autoplay muted loop playsinline preload="metadata"
+			       aria-label="The Klærus trading panel: asset selector, Swap and Flip modes, direction, stake and timeframe"></video>
+			<figcaption>The trade panel — asset, mode, direction, stake, timeframe. Five decisions, one screen.</figcaption>
+		</figure>
+
+		<div class="doc">
+			<aside class="toc">
+				<p>On this page</p>
+				<ol>
+					<li><a href="#problem">The problem</a></li>
+					<li><a href="#approach">Design approach</a></li>
+					<li><a href="#payout">Showing the payout first</a></li>
+					<li><a href="#control">Control mid-trade</a></li>
+					<li><a href="#interface">The interface</a></li>
+					<li><a href="#outcomes">Where it stands</a></li>
+				</ol>
+			</aside>
+
+			<div class="prose">
+
+				<section id="problem">
+					<h2>The problem</h2>
+					<p>Every experienced crypto trader has lived the same moment: you call the direction, the market moves your way, and you still lose. Leverage amplified a wick. The funding rate drained the position overnight. A stop got hunted three seconds before the real move.</p>
+					<p><strong>You were right. The platform still took what you were owed.</strong></p>
+					<p>Traditional perps are engineered for institutions, and retail traders inherit machinery built for someone else's risk appetite. Strip a trade back to what a retail trader is actually deciding and only two questions remain: which direction, and over what timeframe. Everything layered on top of those two questions — margin, funding, liquidation price — is complexity that benefits the house.</p>
+					<p>That framing set the design constraint for the whole product: <em>if a mechanic doesn't help the trader answer direction or timeframe, it shouldn't be in the interface.</em></p>
+				</section>
+
+				<section id="approach">
+					<h2>Design approach</h2>
+					<p>Klærus replaces the perps cockpit with a fixed-payout model. The trader picks an asset, a direction and a timeframe; the protocol prices that as a multiplier; the payout is known before any money moves. The design work was mostly about making that trade feel honest — and making the removal of familiar machinery read as clarity rather than as a missing feature.</p>
+
+					<div class="decision">
+						<span class="tag">Decision 01</span>
+						<h3>Two modes instead of an order book</h3>
+						<p><strong>SWAP</strong> lets a trader back their own read of the market — pick Long or Short. <strong>FLIP</strong> assigns direction randomly at higher multipliers, for traders who want pure probability. Separating the two keeps a conviction trade and a coin-flip from sharing one ambiguous interface, and it makes the higher FLIP multiplier legible as compensation for giving up the choice.</p>
+					</div>
+
+					<div class="decision">
+						<span class="tag">Decision 02</span>
+						<h3>Timeframe as the primary risk dial</h3>
+						<p>With leverage gone, the timeframe ladder — 1 minute through 4 hours — becomes the main lever a trader pulls. Each rung carries its own multiplier, so the risk/reward trade-off is visible in the same control that sets it, rather than buried in a separate margin calculation.</p>
+					</div>
+
+					<div class="decision">
+						<span class="tag">Decision 03</span>
+						<h3>A demo account with real price feeds</h3>
+						<p>Probability perps are an unfamiliar instrument, and the fastest way to lose a curious trader is to make their first lesson an expensive one. Every account carries a permanent demo balance running on live market prices, with every mechanic available and a reset button. Learning the product costs nothing; only conviction costs money.</p>
+					</div>
+				</section>
+
+				<section id="payout">
+					<h2>Showing the payout first</h2>
+					<p>The single most important screen in the product isn't the chart — it's the calculator. Before entering, a trader sets a stake and a timeframe and sees not just the winning number but <em>every</em> outcome, including the ones that hurt. A $100 stake at a 2.40× multiplier resolves like this:</p>
+
+					<div class="table-scroll">
+						<table class="payout">
+							<thead>
+								<tr><th>Outcome</th><th>What it means</th><th>Result</th></tr>
+							</thead>
+							<tbody>
+								<tr><td>Win at expiry</td><td>Direction was right when the timeframe closed</td><td>+$133</td></tr>
+								<tr><td>Cut profit early</td><td>Exited while ahead, before expiry</td><td>+$4 to +$110</td></tr>
+								<tr><td>Liquidated mid-trade</td><td>Stopout triggered before expiry</td><td>−$80</td></tr>
+								<tr><td>Wrong at expiry</td><td>Direction was wrong when the timeframe closed</td><td>−$100</td></tr>
+							</tbody>
+						</table>
+					</div>
+
+					<p>Publishing the downside next to the upside is a deliberate trust move. Trading products usually lead with the win and bury the loss; here the four outcomes sit in one view at the same visual weight, because a trader who can see the worst case before entering has no reason to feel ambushed by it afterwards.</p>
+				</section>
+
+				<section id="control">
+					<h2>Control mid-trade</h2>
+					<p>Binary options have a deserved reputation problem, and most of it comes down to one thing: once you're in, you're locked in until expiry, all-or-nothing. Klærus keeps the simplicity of a binary payout but removes the trap.</p>
+					<ul>
+						<li><strong>Cut Profit</strong> — lock in gains early rather than watching a winning position round-trip.</li>
+						<li><strong>Stopout Loss</strong> — cap the damage while the trade is still open.</li>
+						<li><strong>Breakeven Exit</strong> — walk away flat when conviction changes.</li>
+					</ul>
+					<p>Designing these as three distinct, always-visible actions — rather than one generic "close position" — was intentional. Each maps to a different emotional state a trader is actually in, and naming the state makes the right button easier to find under pressure.</p>
+				</section>
+
+				<section id="interface">
+					<h2>The interface</h2>
+					<p>Everything settles on Arbitrum, in USDT, from a non-custodial wallet. Deposits route through nQ-Swap so a trader can fund from any chain without a manual bridge step — the kind of infrastructure detail that decides whether someone completes their first trade.</p>
+
+					<figure class="media media--phone">
+						<video src="../../assets/videos/klaerus-walkthrough.mp4?v=2"
+						       poster="../../assets/images/klaerus/walkthrough-poster.jpg?v=2"
+						       controls muted loop playsinline preload="metadata"
+						       aria-label="Full walkthrough: selecting an asset, choosing Flip or Swap, setting stake and timeframe, seeing entry price, liquidation point and potential payout, then executing and managing the trade"></video>
+						<figcaption>Full walkthrough — asset, mode, stake and timeframe, with entry price, liquidation point and potential payout resolving before the trade is executed.</figcaption>
+					</figure>
+				</section>
+
+				<section id="outcomes">
+					<h2>Where it stands</h2>
+					<p>Klærus is in closed beta on Arbitrum, accepting applications from a hand-picked group of early traders, with the demo account and all five timeframes available at launch.</p>
+				</section>
+
+			</div>
+		</div>
+
+		<div class="cs-next">
+			<a href="../index.html"><span>Back to</span>All work</a>
+			<a href="../../case-studies/aftermath-finance/index.html"><span>Next</span>Aftermath Finance ›</a>
+		</div>
+	</div>
+</main>
+
+<footer class="site-footer">
+	<div class="wrap">
+		<div class="footer-social">
+			<a href="https://www.linkedin.com/in/tomiwaakinbode" target="_blank" rel="noopener">Linkedin</a>
+			<a href="https://www.behance.net/Tomiwa" target="_blank" rel="noopener">Behance</a>
+		</div>
+		<div class="footer-cta">
+			<h2>Curious about what we can create together? Let's bring something extraordinary to life!</h2>
+			<div class="footer-actions">
+				<a class="footer-btn" href="../../contact/index.html">Get in Touch</a>
+				<span class="available">
+					<span class="pulse" aria-hidden="true"><span></span><span></span></span>
+					Available For Work
+				</span>
+			</div>
+		</div>
+		<div class="footer-legal">
+			<a href="../../policies/index.html">Policies, Terms and Conditions</a>
+			<a href="../../services/index.html">Services</a>
+		</div>
+		<p class="footer-note">© Samuel Akinbode — iamtomiwa.xyz</p>
+	</div>
+</footer>
+
+</body>
+</html>

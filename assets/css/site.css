@@ -150,7 +150,9 @@ a { color: inherit; }
 	.doc-head { padding-top: 72px; }
 }
 @media (max-width: 899.98px) {
-	.doc { grid-template-columns: 1fr; gap: 0; }
+	/* minmax(0, …), not 1fr: a plain 1fr keeps min-width:auto, so a wide table
+	   inside .prose refuses to shrink and pushes the page sideways. */
+	.doc { grid-template-columns: minmax(0, 1fr); gap: 0; }
 	.toc { position: static; padding-bottom: 44px; border-bottom: 1px solid var(--grey-light); margin-bottom: 44px; }
 	.toc ol { columns: 2; column-gap: 32px; }
 }

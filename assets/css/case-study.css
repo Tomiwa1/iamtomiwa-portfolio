@@ -1,0 +1,119 @@
+/*
+ * Case-study specific styling. Loads on top of site.css, which supplies the
+ * fonts, colour tokens, header, footer and prose rules.
+ */
+
+/*
+ * ---- Per-project theming ----
+ *
+ * Each case study carries its subject's own brand colour on the accent details:
+ * the live-link button, decision tags, list bullets and link hovers. The site
+ * chrome — header, footer, body type — stays neutral, so the project reads as
+ * itself without the portfolio changing identity around it.
+ *
+ * Three tokens, because one colour can't do all three jobs:
+ *   --brand      the fill (button background)
+ *   --brand-ink  text sitting ON that fill — must clear 4.5:1 against --brand
+ *   --accent     text sitting on WHITE (tags, bullets) — must clear 4.5:1 on white
+ *
+ * For dark brands all three collapse to "brand + white ink". Light brands can't:
+ * Slean's cyan scores 14.7:1 with black on it but 1.43:1 with white, and is
+ * illegible as text on a white page — so it takes black ink and a darker
+ * same-hue accent for type.
+ *
+ * To theme a new project: sample the colour from the live product (don't guess),
+ * check both ratios, add a body class here, put that class on the page's <body>.
+ *
+ * Klærus    #c408a4 — magenta from the product's primary CTA. White on it 5.36:1.
+ * Cortex     #6339d4 — violet from the memory-graph glow (hue 256°). White on it 6.85:1.
+ * UltraProp  #e7151e — the brand red is #ee4149, but white on that is only
+ *            3.83:1, below AA. This is the same hue (357°) darkened to the first
+ *            passing step, 4.64:1, so the button label stays readable.
+ * Slean      #84e8e8 — the app's cyan CTA, which uses black labels in-product too
+ *            (14.69:1). Type accent drops to #0f766e, same hue, 5.47:1 on white.
+ * Lydus      #047857 — the concept's green is #009c70, but white on that is
+ *            3.51:1. Same hue (163°) darkened to the first passing step, 5.48:1.
+ */
+:root {
+	--brand: var(--black);      /* neutral default: an unthemed project stays black */
+	--brand-ink: var(--white);  /* text/dot colour sitting on the brand fill */
+}
+
+body.cs-klaerus   { --brand: #c408a4; --accent: #c408a4; }
+body.cs-cortex    { --brand: #6339d4; --accent: #6339d4; }
+body.cs-ultraprop { --brand: #e7151e; --accent: #e7151e; }
+body.cs-slean     { --brand: #84e8e8; --accent: #0f766e; --brand-ink: #0b0b0b; }
+body.cs-lydus     { --brand: #047857; --accent: #047857; }
+
+/* ---- Project hero ---- */
+.cs-head { padding: 88px 0 0; }
+.cs-meta {
+	display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+	gap: 28px; margin: 44px 0 0; padding: 32px 0 0; border-top: 1px solid var(--grey-light);
+}
+.cs-meta dt { font-family: var(--mono); font-size: 12.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--grey); margin-bottom: 8px; }
+.cs-meta dd { margin: 0; font-size: 17px; line-height: 1.45; }
+
+/* Filled in the project's own colour; falls back to black when unthemed. */
+.live-link {
+	display: inline-flex; align-items: center; gap: 10px; margin-top: 28px;
+	padding: 14px 26px; border-radius: 999px; background: var(--brand); color: var(--brand-ink);
+	font-size: 16px; font-weight: 500; text-decoration: none; transition: opacity .3s ease;
+}
+.live-link:hover { opacity: .82; }
+.live-link .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--brand-ink); flex: none; }
+
+/* ---- Media ---- */
+.media { margin: 56px 0; }
+/* The hero clip is near-square; full-bleed it would tower over the page */
+.media--hero { max-width: 860px; margin-left: auto; margin-right: auto; }
+.media video, .media img { width: 100%; height: auto; display: block; border-radius: 16px; background: var(--grey-light); }
+.media figcaption { margin: 14px 0 0; font-family: var(--mono); font-size: 12.5px; letter-spacing: .04em; color: var(--grey); }
+
+/* Portrait capture — cap the width or it towers over the column */
+.media--phone { max-width: 400px; margin-left: auto; margin-right: auto; }
+.media--phone video { border-radius: 22px; }
+.media--phone figcaption { text-align: center; }
+/* A squarish UI card — a dialog or panel rather than a full screen */
+.media--card { max-width: 440px; margin-left: auto; margin-right: auto; }
+.media--card figcaption { text-align: center; }
+
+.media-pair { display: grid; grid-template-columns: 1.6fr 1fr; gap: 28px; align-items: start; margin: 56px 0; }
+.media-pair figure { margin: 0; }
+.media-pair video, .media-pair img { width: 100%; height: auto; display: block; border-radius: 16px; }
+.media-pair figcaption { margin: 14px 0 0; font-family: var(--mono); font-size: 12.5px; letter-spacing: .04em; color: var(--grey); }
+
+/* ---- Decision blocks ---- */
+.decision { padding: 32px; border: 1px solid var(--grey-light); border-radius: 18px; margin: 0 0 22px; }
+.decision h3 { margin-top: 0; }
+/* --accent, not --brand: this is type on white, and a light brand (Slean's cyan)
+   would be unreadable here. --accent is the contrast-checked text variant. */
+.decision .tag {
+	display: inline-block; font-family: var(--mono); font-size: 11.5px; letter-spacing: .12em;
+	text-transform: uppercase; color: var(--accent); margin-bottom: 12px;
+}
+.decision p:last-child { margin-bottom: 0; }
+
+/* ---- Payout table ---- */
+.payout { width: 100%; border-collapse: collapse; margin: 0 0 24px; font-size: 16px; }
+.payout th, .payout td { text-align: left; padding: 14px 16px; border-bottom: 1px solid var(--grey-light); }
+.payout th { font-family: var(--mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--grey); font-weight: 400; }
+.payout td:last-child { font-family: var(--mono); }
+.payout tr:last-child td { border-bottom: 0; }
+.table-scroll { overflow-x: auto; }
+
+/* ---- Next / prev ---- */
+.cs-next { border-top: 1px solid var(--grey-light); padding: 48px 0 88px; display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+.cs-next a { font-family: var(--sans); font-weight: 500; font-size: 22px; text-decoration: none; transition: color .3s ease; }
+.cs-next a:hover { color: var(--grey); }
+.cs-next span { display: block; font-family: var(--mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--grey); margin-bottom: 8px; }
+
+@media (max-width: 899.98px) {
+	.media-pair { grid-template-columns: 1fr; }
+	.media--phone { max-width: 100%; }
+}
+@media (max-width: 809.98px) {
+	.cs-head { padding-top: 44px; }
+	.decision { padding: 24px; }
+	.media, .media-pair { margin: 36px 0; }
+}

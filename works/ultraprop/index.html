@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>UltraProp — Samuel Akinbode</title>
+	<meta name="description" content="Designing UltraProp, an on-chain crypto prop firm on Sui: traders clear a transparent evaluation against live market prices and walk away with a portable, verifiable record of how they performed.">
+	<link rel="canonical" href="https://iamtomiwa.xyz/works/ultraprop/">
+	<link href="../../assets/images/7CuiOHMfw9RIwUMCsUOfT5E0pM.png" rel="icon">
+	<link rel="apple-touch-icon" href="../../assets/images/7CuiOHMfw9RIwUMCsUOfT5E0pM.png">
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="https://iamtomiwa.xyz/works/ultraprop/">
+	<meta property="og:title" content="UltraProp — Prove your edge, trade funded">
+	<meta property="og:description" content="An on-chain prop firm where the rules are visible, enforced by contract, and the track record is yours to keep.">
+	<meta property="og:image" content="../../assets/images/ultraprop/terminal.png">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="../../assets/images/ultraprop/terminal.png">
+	<link rel="stylesheet" href="../../assets/css/site.css?v=2">
+	<link rel="stylesheet" href="../../assets/css/case-study.css?v=9">
+</head>
+<body class="cs-ultraprop">
+
+<header class="site-header">
+	<div class="wrap">
+		<a class="logo" href="../../index.html">Samuel</a>
+		<nav class="site-nav">
+			<a href="../index.html">Works</a>
+			<a href="../../about/index.html">About</a>
+			<a href="../../services/index.html">Services</a>
+			<a href="../../contact/index.html">Contact</a>
+		</nav>
+	</div>
+</header>
+
+<main>
+	<div class="wrap">
+
+		<div class="doc-head cs-head">
+			<p class="eyebrow">On-chain prop firm · Sui</p>
+			<h1>UltraProp</h1>
+			<p class="lede">Prop firms ask traders to trust hidden execution, discretionary rules, and a track record that disappears into a private database. UltraProp makes all three visible: trade against live market prices, clear an evaluation whose rules are enforced by contract, and keep a portable proof of how you performed.</p>
+
+			<a class="live-link" href="https://www.ultraprop.xyz" target="_blank" rel="noopener">
+				<span class="dot" aria-hidden="true"></span>
+				See Live
+			</a>
+
+			<dl class="cs-meta">
+				<div>
+					<dt>Role</dt>
+					<dd>Product Designer</dd>
+				</div>
+				<div>
+					<dt>Scope</dt>
+					<dd>Trading terminal, evaluation model, marketing site</dd>
+				</div>
+				<div>
+					<dt>Stack</dt>
+					<dd>Sui Move · Pyth · Rust risk engine</dd>
+				</div>
+				<div>
+					<dt>Year</dt>
+					<dd>2026</dd>
+				</div>
+				<div>
+					<dt>Status</dt>
+					<dd>v1 closed beta</dd>
+				</div>
+			</dl>
+		</div>
+
+		<figure class="media">
+			<img src="../../assets/images/ultraprop/app-scene.png" alt="The UltraProp trading terminal shown against a dark red sky: markets list, BTC/USD chart, and an evaluation panel with account equity, profit target and risk checks" width="1916" height="1132" loading="eager">
+			<figcaption>The terminal — the trade on the left, the evaluation you're being judged against on the right, always in the same view.</figcaption>
+		</figure>
+
+		<div class="doc">
+			<aside class="toc">
+				<p>On this page</p>
+				<ol>
+					<li><a href="#problem">The problem</a></li>
+					<li><a href="#approach">Design approach</a></li>
+					<li><a href="#rules">Rules you can see</a></li>
+					<li><a href="#edge">Showing the house edge</a></li>
+					<li><a href="#record">A record worth keeping</a></li>
+					<li><a href="#outcomes">Where it stands</a></li>
+				</ol>
+			</aside>
+
+			<div class="prose">
+
+				<section id="problem">
+					<h2>The problem</h2>
+					<p>Prop firms fund traders who prove themselves on an evaluation. The model works — but almost every part of it happens somewhere the trader can't see. Fills come from execution you can't inspect. Rules get interpreted by an operator after the fact. And when you pass, the proof lives in that firm's database, which means it isn't really yours and doesn't travel with you.</p>
+					<p>The result is a category where traders are asked to trust a counterparty that also profits from their failure, and where a genuinely good track record can't be carried anywhere.</p>
+					<p><strong>The design problem: how do you make a trader believe the rules aren't moving — when the entire industry's reputation says otherwise?</strong></p>
+				</section>
+
+				<section id="approach">
+					<h2>Design approach</h2>
+					<p>On-chain settlement gives you one thing a traditional prop firm can't offer: the rules can be published and enforced by something neither side controls. A Sui Move contract is the only execution surface — it takes trade intents, models fills deterministically, enforces the limits, and emits the pass or fail. No operator override exists to be argued with.</p>
+					<p>That's the technical foundation. The design job was to make it <em>legible</em>, because a guarantee nobody can see is worth about as much as a promise. Three decisions carried most of that weight.</p>
+
+					<figure class="media">
+						<img src="../../assets/images/ultraprop/apps-rail.png" alt="UltraProp's platform surfaces listed in a rail: Trade, Evaluations, Leaderboard, Genesis points, Trader profile and All apps" width="1916" height="840" loading="lazy">
+						<figcaption>Six surfaces, one product: trading, the evaluation, the leaderboard, cohort points and the trader's own record.</figcaption>
+					</figure>
+
+					<div class="decision">
+						<span class="tag">Decision 01</span>
+						<h3>Put the verdict next to the trade</h3>
+						<p>In a normal terminal, the chart takes the whole screen and your evaluation status lives on another page. Here they share one view: price and position on the left, and a permanent evaluation rail on the right carrying account equity, profit-target progress, and live checks on daily loss, max drawdown and consistency. You never have to go and ask how close you are to failing — the answer is already on screen while you size the trade.</p>
+					</div>
+
+					<figure class="media">
+						<img src="../../assets/images/ultraprop/terminal.png" alt="Close view of the terminal: the evaluation rail showing account equity of $106,248.62, profit target at 62 per cent, and passing checks for daily loss, max drawdown and consistency" width="1724" height="832" loading="lazy">
+						<figcaption>The evaluation rail: equity, profit target at 62%, and the three limits that can end the run — never more than a glance away.</figcaption>
+					</figure>
+
+					<div class="decision">
+						<span class="tag">Decision 02</span>
+						<h3>Tiers as a ladder, not a price list</h3>
+						<p>Starter, Basic and Pro differ on four numbers: account size, profit target, max drawdown and leverage — $10,000 at +8% with 10% drawdown, up to $50,000 at +10% with 8%. Presenting them as one row of comparable figures, with the higher tiers visibly locked until you've earned them, turns pricing into progression. The trader reads it as "what do I unlock next" rather than "what do I buy".</p>
+					</div>
+
+					<div class="decision">
+						<span class="tag">Decision 03</span>
+						<h3>Tell the truth when the feed drops</h3>
+						<p>When the price feed reconnects, the app says so in a banner: <em>"Reconnecting to the live feed — prices are momentarily not updating. Trading stays open."</em> It would be easy to hide that. Naming the degradation, and being precise about what still works, is worth more here than a seamless-looking lie — in a product whose whole pitch is that you can trust what you're seeing, the moment something breaks is the moment the pitch is tested.</p>
+					</div>
+				</section>
+
+				<section id="rules">
+					<h2>Rules you can see</h2>
+					<p>Each tier is a fixed set of constraints, published before a trader starts and enforced continuously rather than reviewed afterwards:</p>
+
+					<div class="table-scroll">
+						<table class="payout">
+							<thead>
+								<tr><th>Tier</th><th>Account</th><th>Profit target</th><th>Max drawdown</th><th>Leverage</th></tr>
+							</thead>
+							<tbody>
+								<tr><td>Starter</td><td>$10,000</td><td>+8%</td><td>10%</td><td>10×</td></tr>
+								<tr><td>Basic</td><td>$25,000</td><td>+8%</td><td>8%</td><td>8×</td></tr>
+								<tr><td>Pro</td><td>$50,000</td><td>+10%</td><td>8%</td><td>8×</td></tr>
+							</tbody>
+						</table>
+					</div>
+
+					<p>Breach a limit and the evaluation closes immediately — the contract does it, not a person. That sounds harsh, and it is, but it's the trade for the thing traders actually want: certainty that a passing run won't be re-litigated. Designing the failure state meant making the boundary visible early enough that closing an evaluation never feels like an ambush.</p>
+				</section>
+
+				<section id="edge">
+					<h2>Showing the house edge</h2>
+					<div class="callout">
+						<p>Every fill is priced against a live oracle with a <strong>disclosed +2 bps house spread</strong>, and the expected fill and price impact are shown before the order is submitted.</p>
+					</div>
+					<p>This is the detail I'd point to first. Every prop firm has an edge; the industry norm is to keep it vague. Publishing it as a number — and showing the simulated fill before the trader commits — converts the single most suspicious part of the model into a spec. A trader can decide whether 2 bps is fair. They can't decide whether "competitive execution" is.</p>
+					<p>Trading spans the full Bluefin, DeepBook and Hyperliquid perpetual catalog — over a hundred markets — priced from live feeds rather than an internal book.</p>
+
+					<figure class="media">
+						<img src="../../assets/images/ultraprop/markets-strip.png" alt="The tradable market set: BTC, ETH, SOL, SUI and HYPE shown with their token marks" width="1916" height="200" loading="lazy">
+						<figcaption>One evaluation, the whole catalog — markets that never close.</figcaption>
+					</figure>
+				</section>
+
+				<section id="record">
+					<h2>A record worth keeping</h2>
+					<figure class="media media--card">
+						<img src="../../assets/images/ultraprop/genesis-onboarding.png" alt="UltraProp onboarding: a Genesis card above the text 'Pass an evaluation to earn a non-transferable proof of trading skill in the v1 Genesis cohort'" width="790" height="730" loading="lazy">
+						<figcaption>Onboarding states the deal in two sentences.</figcaption>
+					</figure>
+					<p>Passing mints a non-transferable Genesis credential — proof of a specific run under published constraints, held by the trader rather than the firm. Because it can't be sold or transferred, it means something: it's evidence about a person, not an asset to trade.</p>
+					<p>The leaderboard leans on the same idea, showing on-chain identities rather than invented handles. It reframes the product from "a firm that grades you" to "a place your track record accumulates" — which is a different, and much better, reason to come back.</p>
+				</section>
+
+				<section id="outcomes">
+					<h2>Where it stands</h2>
+					<p>UltraProp is in v1 closed beta on Sui with an invited Genesis cohort, trading against live Bluefin, DeepBook and Hyperliquid prices. Rules are enforced by contract, and every pass and fail is verifiable — the beta is explicit that there are no token promises attached.</p>
+				</section>
+
+			</div>
+		</div>
+
+		<div class="cs-next">
+			<a href="../index.html"><span>Back to</span>All work</a>
+			<a href="../cortex/index.html"><span>Next</span>Cortex ›</a>
+		</div>
+	</div>
+</main>
+
+<footer class="site-footer">
+	<div class="wrap">
+		<div class="footer-social">
+			<a href="https://www.linkedin.com/in/tomiwaakinbode" target="_blank" rel="noopener">Linkedin</a>
+			<a href="https://www.behance.net/Tomiwa" target="_blank" rel="noopener">Behance</a>
+		</div>
+		<div class="footer-cta">
+			<h2>Curious about what we can create together? Let's bring something extraordinary to life!</h2>
+			<div class="footer-actions">
+				<a class="footer-btn" href="../../contact/index.html">Get in Touch</a>
+				<span class="available">
+					<span class="pulse" aria-hidden="true"><span></span><span></span></span>
+					Available For Work
+				</span>
+			</div>
+		</div>
+		<div class="footer-legal">
+			<a href="../../policies/index.html">Policies, Terms and Conditions</a>
+			<a href="../../services/index.html">Services</a>
+		</div>
+		<p class="footer-note">© Samuel Akinbode — iamtomiwa.xyz</p>
+	</div>
+</footer>
+
+</body>
+</html>
