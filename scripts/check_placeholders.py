@@ -20,6 +20,7 @@ PAGES = [
     'terms/index.html',
     'policies/index.html',
     'works/klaerus/index.html',
+    'works/northstar/index.html',
 ]
 
 PLACEHOLDER = re.compile(r'\[\[\s*([^\]]+?)\s*\]\]')

@@ -70,6 +70,16 @@
 		mark: 'slean-card'
 	});
 
+	// NorthStar leads the grid — inserted before Klærus rather than displacing a
+	// tile, giving the order NorthStar, Klærus, Cortex, UltraProp, Lydus, Slean.
+	INSERTIONS.push({
+		before: 'klaerus-card',
+		title: 'NorthStar Surgery',
+		href: 'works/northstar/index.html',
+		image: 'assets/images/northstar/card.jpg',
+		mark: 'northstar-card'
+	});
+
 	var ALL_MARKS = REPLACEMENTS.concat(INSERTIONS).map(function (s) { return s.mark; });
 
 	// "./works/some-slug" or "./case-studies/some-slug" -> a path that actually exists
@@ -156,12 +166,12 @@
 
 	function insertCard(spec) {
 		if (document.querySelector('.' + spec.mark)) return;
-		var anchor = document.querySelector('.' + spec.after);
-		if (!anchor || !anchor.parentNode) return; // wait until the card it follows exists
+		var anchor = document.querySelector('.' + (spec.after || spec.before));
+		if (!anchor || !anchor.parentNode) return; // wait until the neighbour card exists
 
 		var card = buildCard(anchor, spec);
 		if (!card) return;
-		anchor.parentNode.insertBefore(card, anchor.nextSibling);
+		anchor.parentNode.insertBefore(card, spec.before ? anchor : anchor.nextSibling);
 	}
 
 	function apply() {

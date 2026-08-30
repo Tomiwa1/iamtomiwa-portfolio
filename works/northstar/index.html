@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>NorthStar Surgery — Samuel Akinbode</title>
+	<meta name="description" content="Design engineering for NorthStar Surgery Specialists, an Austin general surgery practice: rebuilding the site around how patients actually search, across Google, maps, AI answers and voice.">
+	<link rel="canonical" href="https://iamtomiwa.xyz/works/northstar/">
+	<link href="../../assets/images/7CuiOHMfw9RIwUMCsUOfT5E0pM.png" rel="icon">
+	<link rel="apple-touch-icon" href="../../assets/images/7CuiOHMfw9RIwUMCsUOfT5E0pM.png">
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="https://iamtomiwa.xyz/works/northstar/">
+	<meta property="og:title" content="NorthStar Surgery — Designing for how patients search">
+	<meta property="og:description" content="A surgical practice rebuilt around search: SEO, local, generative and answer-engine optimisation.">
+	<meta property="og:image" content="../../assets/images/northstar/card.jpg">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="../../assets/images/northstar/card.jpg">
+	<link rel="stylesheet" href="../../assets/css/site.css?v=2">
+	<link rel="stylesheet" href="../../assets/css/case-study.css?v=10">
+</head>
+<body class="cs-northstar">
+
+<header class="site-header">
+	<div class="wrap">
+		<a class="logo" href="../../index.html">Samuel</a>
+		<nav class="site-nav">
+			<a href="../index.html">Works</a>
+			<a href="../../about/index.html">About</a>
+			<a href="../../services/index.html">Services</a>
+			<a href="../../contact/index.html">Contact</a>
+		</nav>
+	</div>
+</header>
+
+<main>
+	<div class="wrap">
+
+		<div class="doc-head cs-head">
+			<p class="eyebrow">General Surgery Practice · Austin, Texas</p>
+			<h1>NorthStar Surgery</h1>
+			<p class="lede">A surgical practice doesn't win patients with a prettier homepage. It wins them by being the answer when someone types "hernia surgeon near me" at 11pm — in Google, in the map pack, and increasingly inside an AI answer that never shows a blue link at all. My job was to build a site that holds up in all three.</p>
+
+			<a class="live-link" href="https://northstarsurgery.com" target="_blank" rel="noopener">
+				<span class="dot" aria-hidden="true"></span>
+				See Live
+			</a>
+
+			<dl class="cs-meta">
+				<div>
+					<dt>Role</dt>
+					<dd>Design Engineering</dd>
+				</div>
+				<div>
+					<dt>Client</dt>
+					<dd>NorthStar Surgery Specialists, P.A.</dd>
+				</div>
+				<div>
+					<dt>Scope</dt>
+					<dd>Site build, search architecture, conversion paths</dd>
+				</div>
+				<div>
+					<dt>Period</dt>
+					<dd>2025 – present</dd>
+				</div>
+				<div>
+					<dt>Status</dt>
+					<dd>Live · ongoing</dd>
+				</div>
+			</dl>
+		</div>
+
+		<figure class="media media--hero">
+			<img src="../../assets/images/northstar/home-desktop.jpg" alt="NorthStar Surgery homepage: the two surgeons, the practice's positioning line, and a band showing 4,000+ robotic surgeries" width="2000" height="1250" loading="eager">
+			<figcaption>The homepage — credibility first: the surgeons, the volume, and a route to booking above the fold.</figcaption>
+		</figure>
+
+		<div class="doc">
+			<aside class="toc">
+				<p>On this page</p>
+				<ol>
+					<li><a href="#problem">The problem</a></li>
+					<li><a href="#approach">Design approach</a></li>
+					<li><a href="#search">Building for four kinds of search</a></li>
+					<li><a href="#conversion">Turning visits into patients</a></li>
+					<li><a href="#results">Results</a></li>
+				</ol>
+			</aside>
+
+			<div class="prose">
+
+				<section id="problem">
+					<h2>The problem</h2>
+					<p>NorthStar Surgery Specialists is a two-surgeon general surgery practice in Austin, founded in 2008, with more than 4,000 robotic procedures behind it. Clinically, it competes with anyone in the metro. On the web, it was competing with hospital networks that have marketing departments.</p>
+					<p>Practices like this lose patients in a narrow window. Someone gets a diagnosis, or a referral, or a symptom that frightens them. They search. What they find in the next ninety seconds decides who they call. That search is now split across at least four surfaces — classic organic results, the local map pack, AI-generated answers, and voice assistants — and a site built for only the first one is invisible in the other three.</p>
+					<p><strong>The brief wasn't "redesign the website". It was: be the practice that gets found, and make the next step obvious once you are.</strong></p>
+				</section>
+
+				<section id="approach">
+					<h2>Design approach</h2>
+					<p>This was a design engineering role rather than a pure design one — the same person doing the information architecture, the markup, the structured data and the performance work, because on a site like this those aren't separate problems. How a page is structured <em>is</em> how it ranks, and how it ranks is the whole business case.</p>
+
+					<div class="decision">
+						<span class="tag">Decision 01</span>
+						<h3>One page per procedure, not one services page</h3>
+						<p>Patients don't search for "general surgery". They search for the specific thing they're frightened of — gallbladder, hernia, hemorrhoids, colorectal, breast. Each procedure got its own page with its own depth, so the page that ranks is the page that answers the exact question, rather than a services index that mentions everything and satisfies nobody.</p>
+					</div>
+
+					<div class="decision">
+						<span class="tag">Decision 02</span>
+						<h3>Credibility as a layout decision</h3>
+						<p>For elective surgery the conversion barrier isn't price, it's trust. Board certification, fellowships, the 4,000+ robotic procedure count, named patient testimonials and the review platforms all sit high in the page order rather than buried on an About page — because the question a visitor is actually asking is "would I let this person operate on me?"</p>
+					</div>
+
+					<div class="decision">
+						<span class="tag">Decision 03</span>
+						<h3>Every page carries the next step</h3>
+						<p>Pay Bills, Contact Form, Appointment, Patient Referrals and the phone number are persistent, not parked on a contact page. A patient reading about hernia repair at midnight and a referring physician sending a patient over need different next steps, and both should be one tap away from wherever they happen to be.</p>
+					</div>
+				</section>
+
+				<section id="search">
+					<h2>Building for four kinds of search</h2>
+					<p>The site is built against four overlapping surfaces, each of which rewards something different:</p>
+					<ul>
+						<li><strong>SEO</strong> — procedure-level pages, clean heading hierarchy, internal linking between related procedures, and the technical baseline of speed, crawlability and mobile rendering.</li>
+						<li><strong>LSO (local search)</strong> — the practice has to win "near me". That means consistent name, address and phone across the site and directories, location-specific pages for Austin, Round Rock and Cedar Park, embedded practice details, and active review profiles across Google, Facebook, Yelp, Healthgrades and RateMDs.</li>
+						<li><strong>GEO (generative engine optimisation)</strong> — AI answers quote sources that state things plainly and are attributable. Content is written in clear claims tied to named, credentialled surgeons, so a model summarising "robotic hernia surgery in Austin" has something quotable to lift.</li>
+						<li><strong>AEO (answer engine optimisation)</strong> — structured data and question-shaped content so the site can answer directly in featured snippets and voice results, where there is exactly one answer and no second place.</li>
+					</ul>
+					<p>These pull in the same direction more often than not. Marking up a procedure page properly for an answer engine also makes it a better page for a frightened human reading it at midnight — which is the only reason any of it is worth doing.</p>
+
+					<figure class="media">
+						<img src="../../assets/images/northstar/service-desktop.jpg" alt="The da Vinci robotic surgery page, with a medically reviewed byline naming both board-certified surgeons above the content" width="2000" height="1250" loading="lazy">
+						<figcaption>Procedure pages open with a medically-reviewed byline naming both surgeons — an authorship signal for search engines, and a trust signal for patients.</figcaption>
+					</figure>
+				</section>
+
+				<section id="conversion">
+					<h2>Turning visits into patients</h2>
+					<p>Ranking is only half of it. A surgical practice has a small number of high-value conversions — a booked consultation, a referral from another physician — so the site is built to qualify rather than just capture.</p>
+					<p>Procedure pages explain candidacy honestly, including who a procedure <em>isn't</em> for. Financing is surfaced early rather than discovered late. Referral and intake forms are separated from general contact, so a referring physician isn't funnelled through a form written for patients. The result is fewer, better enquiries — people who arrive already knowing what they need and whether this practice does it.</p>
+				</section>
+
+				<section id="results">
+					<h2>Results</h2>
+					<div class="stat-row">
+						<div class="stat">
+							<span class="stat-num">~80%</span>
+							<span class="stat-label">Annual revenue growth over the engagement</span>
+						</div>
+						<div class="stat">
+							<span class="stat-num">4</span>
+							<span class="stat-label">Search surfaces targeted — SEO, local, generative, answer</span>
+						</div>
+						<div class="stat">
+							<span class="stat-num">4,000+</span>
+							<span class="stat-label">Robotic procedures the site now evidences</span>
+						</div>
+					</div>
+					<p>Over the course of the engagement the practice's annual revenue grew by roughly <strong>80%</strong>, alongside the search and conversion work described above — more qualified patient enquiries reaching the practice, and more of them converting into booked procedures.</p>
+					<p>The honest caveat: a surgical practice grows for many reasons at once. A second surgeon joined in 2023, referral relationships compound, and reputation in a metro like Austin builds over years. The website's job was to make sure that when demand existed, NorthStar was the practice that got found and the one that was easy to say yes to.</p>
+				</section>
+
+			</div>
+		</div>
+
+		<div class="cs-next">
+			<a href="../index.html"><span>Back to</span>All work</a>
+			<a href="../klaerus/index.html"><span>Next</span>Klærus ›</a>
+		</div>
+	</div>
+</main>
+
+<footer class="site-footer">
+	<div class="wrap">
+		<div class="footer-social">
+			<a href="https://www.linkedin.com/in/tomiwaakinbode" target="_blank" rel="noopener">Linkedin</a>
+			<a href="https://www.behance.net/Tomiwa" target="_blank" rel="noopener">Behance</a>
+		</div>
+		<div class="footer-cta">
+			<h2>Curious about what we can create together? Let's bring something extraordinary to life!</h2>
+			<div class="footer-actions">
+				<a class="footer-btn" href="../../contact/index.html">Get in Touch</a>
+				<span class="available">
+					<span class="pulse" aria-hidden="true"><span></span><span></span></span>
+					Available For Work
+				</span>
+			</div>
+		</div>
+		<div class="footer-legal">
+			<a href="../../policies/index.html">Policies, Terms and Conditions</a>
+			<a href="../../services/index.html">Services</a>
+		</div>
+		<p class="footer-note">© Samuel Akinbode — iamtomiwa.xyz</p>
+	</div>
+</footer>
+
+</body>
+</html>
