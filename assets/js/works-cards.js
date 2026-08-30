@@ -70,6 +70,16 @@
 		mark: 'slean-card'
 	});
 
+	// 6H sits third, straight after Klærus. Cortex is inserted first (above), so
+	// inserting after the same card lands 6H between Klærus and Cortex.
+	INSERTIONS.push({
+		after: 'klaerus-card',
+		title: '6H Agency',
+		href: 'works/6h-agency/index.html',
+		image: 'assets/images/sixh/card.svg',
+		mark: 'sixh-card'
+	});
+
 	// NorthStar leads the grid — inserted before Klærus rather than displacing a
 	// tile, giving the order NorthStar, Klærus, Cortex, UltraProp, Lydus, Slean.
 	INSERTIONS.push({

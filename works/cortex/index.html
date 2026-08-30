@@ -3,14 +3,14 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Cortex — Samuel Akinbode</title>
+	<title>Cortex · Samuel Akinbode</title>
 	<meta name="description" content="Designing Cortex, a sovereign memory layer for AI built on Sui, Walrus and Seal: durable encrypted memory that follows you across every model, tool and session.">
 	<link rel="canonical" href="https://iamtomiwa.xyz/works/cortex/">
 	<link href="../../assets/images/7CuiOHMfw9RIwUMCsUOfT5E0pM.png" rel="icon">
 	<link rel="apple-touch-icon" href="../../assets/images/7CuiOHMfw9RIwUMCsUOfT5E0pM.png">
 	<meta property="og:type" content="article">
 	<meta property="og:url" content="https://iamtomiwa.xyz/works/cortex/">
-	<meta property="og:title" content="Cortex — Sovereign memory for AI">
+	<meta property="og:title" content="Cortex · Sovereign memory for AI">
 	<meta property="og:description" content="Durable encrypted memory that follows you across every model, tool and session.">
 	<meta property="og:image" content="../../assets/images/cortex/brain-graph.jpg">
 	<meta name="twitter:card" content="summary_large_image">
@@ -38,7 +38,7 @@
 		<div class="doc-head cs-head">
 			<p class="eyebrow">Sovereign memory for AI · Sui</p>
 			<h1>Cortex</h1>
-			<p class="lede">AI forgets you every time the session, the tool or the model changes. Cortex is a memory layer that doesn't — durable, encrypted memory you own, that follows you into ChatGPT, Claude, Cursor and the CLI, and turns into prompts, loops and agent workflows.</p>
+			<p class="lede">AI forgets you every time the session, the tool or the model changes. Cortex is a memory layer that doesn't, durable, encrypted memory you own, that follows you into ChatGPT, Claude, Cursor and the CLI, and turns into prompts, loops and agent workflows.</p>
 
 			<a class="live-link" href="https://usecortexai.xyz" target="_blank" rel="noopener">
 				<span class="dot" aria-hidden="true"></span>
@@ -71,7 +71,7 @@
 
 		<figure class="media">
 			<img src="../../assets/images/cortex/brain-graph.jpg" alt="The Cortex brain graph: a central memory node surrounded by clusters labelled Ideas, Notes, Work, Reading and People, connected by weighted links" width="1800" height="1214" loading="eager">
-			<figcaption>The brain — memory clusters, connection strengths and recall confidence, rendered as one navigable graph.</figcaption>
+			<figcaption>The brain, memory clusters, connection strengths and recall confidence, rendered as one navigable graph.</figcaption>
 		</figure>
 
 		<div class="doc">
@@ -93,13 +93,13 @@
 				<section id="problem">
 					<h2>The problem</h2>
 					<p>Every AI tool starts you from zero. You explain your project to ChatGPT, then explain it again to Claude, then again to Cursor, then again tomorrow when the session resets. The context you've built up lives in someone else's product, in a shape you can't inspect, move or own.</p>
-					<p>Most memory tools stop at storage and search — they remember strings, and stop there. What they don't give you is ownership of that memory, the ability to share a slice of it with a specific person or agent, or any way to turn it into work.</p>
+					<p>Most memory tools stop at storage and search, they remember strings, and stop there. What they don't give you is ownership of that memory, the ability to share a slice of it with a specific person or agent, or any way to turn it into work.</p>
 					<p><strong>The design problem wasn't "how do we store more". It was: how do you make an invisible, abstract asset feel like something a person owns, can see, and can act on.</strong></p>
 				</section>
 
 				<section id="approach">
 					<h2>Design approach</h2>
-					<p>Cortex has an unusually wide surface for an early product — chat, a memory graph, a prompt studio, multi-agent rooms, team spaces, and connectors into a dozen external tools. The design work was largely about giving that surface a spine simple enough to explain in one sentence: <strong>store, coordinate, dream.</strong> Store what matters, coordinate it across people and agents, then let the system surface what you didn't think to ask for.</p>
+					<p>Cortex has an unusually wide surface for an early product, chat, a memory graph, a prompt studio, multi-agent rooms, team spaces, and connectors into a dozen external tools. The design work was largely about giving that surface a spine simple enough to explain in one sentence: <strong>store, coordinate, dream.</strong> Store what matters, coordinate it across people and agents, then let the system surface what you didn't think to ask for.</p>
 
 					<div class="decision">
 						<span class="tag">Decision 01</span>
@@ -110,20 +110,20 @@
 					<div class="decision">
 						<span class="tag">Decision 02</span>
 						<h3>An empty state that promises nothing</h3>
-						<p>Signed out, the app says "Hello, anon — sign in to open your memory. Until then we don't know you, and nothing is stored." For a product whose entire pitch is sovereignty, the empty state is the first place that claim is either kept or broken. Saying plainly that nothing is being retained does more for trust than a privacy page nobody opens.</p>
+						<p>Signed out, the app says "Hello, anon, sign in to open your memory. Until then we don't know you, and nothing is stored." For a product whose entire pitch is sovereignty, the empty state is the first place that claim is either kept or broken. Saying plainly that nothing is being retained does more for trust than a privacy page nobody opens.</p>
 					</div>
 
 					<div class="decision">
 						<span class="tag">Decision 03</span>
 						<h3>Memory as a place, not a list</h3>
-						<p>A list of saved items is a filing cabinet. Cortex renders memory as a graph you can pan, zoom, search and open — clusters sized by weight, links labelled with how many memories connect them, each node carrying a recall confidence. It turns "what do I know about this?" into a question you answer by looking.</p>
+						<p>A list of saved items is a filing cabinet. Cortex renders memory as a graph you can pan, zoom, search and open, clusters sized by weight, links labelled with how many memories connect them, each node carrying a recall confidence. It turns "what do I know about this?" into a question you answer by looking.</p>
 					</div>
 				</section>
 
 				<section id="brain">
 					<h2>Making memory visible</h2>
-					<p>The brain is the piece that makes the abstraction concrete. Clusters emerge from what you've actually saved — Ideas, Notes, Work, Reading, People — and each carries an integrity score, so you can see which parts of your memory are dense and trustworthy and which are thin.</p>
-					<p>It's also where the <em>elastic</em> part shows up. Cortex runs consolidation sweeps that merge duplicates, verify entries, prune redundancy and connect related memories, so the graph gets tidier as it grows instead of turning into sludge. Node-level actions — open, verify, pin, forget — give that process a manual override, because a system that reorganises your memory without a way to intervene is a system you can't trust.</p>
+					<p>The brain is the piece that makes the abstraction concrete. Clusters emerge from what you've actually saved, Ideas, Notes, Work, Reading, People, and each carries an integrity score, so you can see which parts of your memory are dense and trustworthy and which are thin.</p>
+					<p>It's also where the <em>elastic</em> part shows up. Cortex runs consolidation sweeps that merge duplicates, verify entries, prune redundancy and connect related memories, so the graph gets tidier as it grows instead of turning into sludge. Node-level actions, open, verify, pin, forget, give that process a manual override, because a system that reorganises your memory without a way to intervene is a system you can't trust.</p>
 				</section>
 
 				<section id="everywhere">
@@ -132,10 +132,10 @@
 
 					<figure class="media">
 						<img src="../../assets/images/cortex/integrations.jpg" alt="The Cortex integrations screen showing connectors for ChatGPT, Claude, Claude Code, Cursor, VS Code, Codex, Windsurf and Cline" width="1800" height="926" loading="lazy">
-						<figcaption>One memory layer, eight surfaces — connect once, then recall and write memory from any of them.</figcaption>
+						<figcaption>One memory layer, eight surfaces, connect once, then recall and write memory from any of them.</figcaption>
 					</figure>
 
-					<p>Designing this as a grid of familiar logos with a single <strong>Connect</strong> action each — rather than as configuration — matters more than it looks. It reframes Cortex from "another AI workspace you have to live in" to "the memory your existing tools were missing," which is the difference between asking someone to switch and asking them to add.</p>
+					<p>Designing this as a grid of familiar logos with a single <strong>Connect</strong> action each, rather than as configuration, matters more than it looks. It reframes Cortex from "another AI workspace you have to live in" to "the memory your existing tools were missing," which is the difference between asking someone to switch and asking them to add.</p>
 				</section>
 
 				<section id="studio">
@@ -144,14 +144,14 @@
 
 					<figure class="media">
 						<img src="../../assets/images/cortex/studio.jpg" alt="Cortex Studio generating a prompt from memory, showing token count, the grounding memory count, and Prompt or Loop mode" width="1800" height="1056" loading="lazy">
-						<figcaption>Studio — a generated prompt with its grounding made explicit: which memories it drew on, and how many.</figcaption>
+						<figcaption>Studio, a generated prompt with its grounding made explicit: which memories it drew on, and how many.</figcaption>
 					</figure>
 
 					<p>Surfacing "grounded in <em>N</em> of <em>M</em> memories" was a deliberate honesty mechanism. Generative features invite blind trust; showing the evidence count lets someone judge an output before they rely on it, and makes a thin result legible as thin rather than as wrong.</p>
 
 					<figure class="media">
 						<img src="../../assets/images/cortex/agents.jpg" alt="The Cortex agents screen with task rooms, an agent roster and a shared-memory input" width="1800" height="1056" loading="lazy">
-						<figcaption>Agent rooms — specialists mentioned into a task, working over one shared memory rather than isolated chats.</figcaption>
+						<figcaption>Agent rooms, specialists mentioned into a task, working over one shared memory rather than isolated chats.</figcaption>
 					</figure>
 				</section>
 
@@ -159,27 +159,27 @@
 					<h2>What sovereignty changes</h2>
 					<p>Cortex is built on the Sui stack end to end, and each layer has a visible consequence in the interface rather than being invisible plumbing:</p>
 					<ul>
-						<li><strong>Sui</strong> — identity and ownership, so memory belongs to an account rather than a login.</li>
-						<li><strong>Walrus</strong> — durable decentralised storage, so context outlives one device or session.</li>
-						<li><strong>Seal</strong> — threshold encryption and on-chain access gating, which is what makes selective sharing real rather than a permissions checkbox.</li>
-						<li><strong>MemWal</strong> — memory namespaces and semantic recall, so retrieval works by meaning rather than keywords.</li>
-						<li><strong>SuiNS</strong> — readable names, so sharing with a person or agent doesn't mean pasting a wallet address.</li>
+						<li><strong>Sui</strong>, identity and ownership, so memory belongs to an account rather than a login.</li>
+						<li><strong>Walrus</strong>, durable decentralised storage, so context outlives one device or session.</li>
+						<li><strong>Seal</strong>, threshold encryption and on-chain access gating, which is what makes selective sharing real rather than a permissions checkbox.</li>
+						<li><strong>MemWal</strong>, memory namespaces and semantic recall, so retrieval works by meaning rather than keywords.</li>
+						<li><strong>SuiNS</strong>, readable names, so sharing with a person or agent doesn't mean pasting a wallet address.</li>
 					</ul>
-					<p>The design consequence is that encryption and ownership can't be hidden away as settings — they're the product's whole argument. Sharing is scoped by identity, blobs are encrypted client-side before they leave, and access can be revoked. The interface's job is to make those guarantees feel like ordinary product behaviour instead of crypto ceremony.</p>
+					<p>The design consequence is that encryption and ownership can't be hidden away as settings, they're the product's whole argument. Sharing is scoped by identity, blobs are encrypted client-side before they leave, and access can be revoked. The interface's job is to make those guarantees feel like ordinary product behaviour instead of crypto ceremony.</p>
 				</section>
 
 				<section id="outcomes">
 					<h2>Where it stands</h2>
-					<p>Cortex is live on testnet with the full surface in place — memory, brain, agents, teams, knowledge, studio and connectors — plus a hosted MCP server and a public Move package. The codebase is open source.</p>
-					<p>The next design problem is the interesting one: as a memory graph grows past what a person can hold in their head, the interface has to start making editorial decisions about what to surface. That's what dreams — memory-derived synthesis that runs before you ask — are meant to answer.</p>
+					<p>Cortex is live on testnet with the full surface in place, memory, brain, agents, teams, knowledge, studio and connectors, plus a hosted MCP server and a public Move package. The codebase is open source.</p>
+					<p>The next design problem is the interesting one: as a memory graph grows past what a person can hold in their head, the interface has to start making editorial decisions about what to surface. That's what dreams, memory-derived synthesis that runs before you ask, are meant to answer.</p>
 				</section>
 
 			</div>
 		</div>
 
 		<div class="cs-next">
-			<a href="../index.html"><span>Back to</span>All case studies</a>
-			<a href="../xend-global/index.html"><span>Next</span>Xend Global ›</a>
+			<a href="../index.html"><span>Back to</span>All work</a>
+			<a href="../ultraprop/index.html"><span>Next</span>UltraProp ›</a>
 		</div>
 	</div>
 </main>
@@ -201,10 +201,9 @@
 			</div>
 		</div>
 		<div class="footer-legal">
-			<a href="../../policies/index.html">Policies, Terms and Conditions</a>
 			<a href="../../services/index.html">Services</a>
 		</div>
-		<p class="footer-note">© Samuel Akinbode — iamtomiwa.xyz</p>
+		<p class="footer-note">© Samuel Akinbode, iamtomiwa.xyz</p>
 	</div>
 </footer>
 

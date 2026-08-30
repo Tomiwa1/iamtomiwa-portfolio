@@ -1,0 +1,32 @@
+<svg viewBox="0 0 640 640" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="6H Agency, native advertising, Cologne">
+  <defs>
+    <radialGradient id="g1" cx="78%" cy="16%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity=".26"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g2" cx="10%" cy="94%" r="58%">
+      <stop offset="0%" stop-color="#000000" stop-opacity=".17"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="640" height="640" fill="#ff3c00"/>
+  <rect width="640" height="640" fill="url(#g1)"/>
+  <rect width="640" height="640" fill="url(#g2)"/>
+
+  <!-- wordmark, centred so a square crop can't clip it -->
+  <text x="320" y="330" text-anchor="middle"
+        font-family="Onest, Inter, Helvetica, Arial, sans-serif" font-size="150"
+        font-weight="700" letter-spacing="-5" fill="#0b0b0b">6H</text>
+  <circle cx="447" cy="313" r="15" fill="#0b0b0b"/>
+
+  <text x="320" y="396" text-anchor="middle"
+        font-family="ui-monospace, Menlo, Consolas, monospace" font-size="18"
+        letter-spacing="4" fill="#0b0b0b" opacity=".8">NATIVE ADVERTISING</text>
+
+  <path d="M188 436h264" stroke="#0b0b0b" stroke-opacity=".3" stroke-width="1.5"/>
+
+  <text x="320" y="472" text-anchor="middle"
+        font-family="ui-monospace, Menlo, Consolas, monospace" font-size="16"
+        letter-spacing="2.6" fill="#0b0b0b" opacity=".62">COLOGNE · 2022</text>
+</svg>

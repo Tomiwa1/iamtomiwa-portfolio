@@ -3,14 +3,14 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Slean — Samuel Akinbode</title>
+	<title>Slean · Samuel Akinbode</title>
 	<meta name="description" content="Designing Slean, a mobile-native gamified learning platform that takes self-taught developers from curious about Solana to deploying their first on-chain program.">
 	<link rel="canonical" href="https://iamtomiwa.xyz/works/slean/">
 	<link href="../../assets/images/7CuiOHMfw9RIwUMCsUOfT5E0pM.png" rel="icon">
 	<link rel="apple-touch-icon" href="../../assets/images/7CuiOHMfw9RIwUMCsUOfT5E0pM.png">
 	<meta property="og:type" content="article">
 	<meta property="og:url" content="https://iamtomiwa.xyz/works/slean/">
-	<meta property="og:title" content="Slean — Learning Solana, one streak at a time">
+	<meta property="og:title" content="Slean · Learning Solana, one streak at a time">
 	<meta property="og:description" content="A mobile-native gamified learning platform for developers entering Solana.">
 	<meta property="og:image" content="../../assets/images/slean/hero.jpg">
 	<meta name="twitter:card" content="summary_large_image">
@@ -38,7 +38,7 @@
 		<div class="doc-head cs-head">
 			<p class="eyebrow">Mobile learning · Solana</p>
 			<h1>Slean</h1>
-			<p class="lede">A mobile-native learning platform that takes a self-taught developer from "I'm curious about Solana" to "I just deployed my first on-chain program" — without ever leaving the app.</p>
+			<p class="lede">A mobile-native learning platform that takes a self-taught developer from "I'm curious about Solana" to "I just deployed my first on-chain program", without ever leaving the app.</p>
 
 			<dl class="cs-meta">
 				<div>
@@ -62,7 +62,7 @@
 
 		<figure class="media">
 			<img src="../../assets/images/slean/hero.jpg" alt="Three Slean screens: the launch screen, a trader profile with skill progress and streak calendar, and a lesson completion screen awarding XP" width="2000" height="1125" loading="eager">
-			<figcaption>Splash, profile and lesson completion — the loop the whole product is built around.</figcaption>
+			<figcaption>Splash, profile and lesson completion, the loop the whole product is built around.</figcaption>
 		</figure>
 
 		<div class="doc">
@@ -84,7 +84,7 @@
 					<h2>The problem</h2>
 					<p>Learning Solana development means assembling your own curriculum out of scattered docs, half-finished YouTube series, Discord threads and example repos that no longer compile. There's no obvious first step, no way to tell whether you're ready for the next thing, and nothing to show for the hours you put in.</p>
 					<p>The people worst served by that are exactly the people the ecosystem needs: <strong>self-taught or Web2 developers, often in mobile-first regions like Nigeria, India and Brazil, curious about Solana but overwhelmed by where to start.</strong> Many of them don't have a desktop dev environment to fall back on.</p>
-					<p>Slean's premise was to collapse that scattered path into one, and to put it somewhere they already are — a phone.</p>
+					<p>Slean's premise was to collapse that scattered path into one, and to put it somewhere they already are, a phone.</p>
 				</section>
 
 				<figure class="media">
@@ -95,7 +95,7 @@
 				<section id="tension">
 					<h2>The core tension</h2>
 					<p>The hard part of this project wasn't the interface. It was a genuine conflict between two things the product had to be at once.</p>
-					<p><strong>Gamification pulls toward delight</strong> — rewards, quick wins, badges, streaks, leaderboards. <strong>Solana development pulls toward rigour</strong> — Rust, the account model, transaction fees, security pitfalls, deploying to testnet, debugging when it breaks.</p>
+					<p><strong>Gamification pulls toward delight</strong>, rewards, quick wins, badges, streaks, leaderboards. <strong>Solana development pulls toward rigour</strong>, Rust, the account model, transaction fees, security pitfalls, deploying to testnet, debugging when it breaks.</p>
 					<div class="callout">
 						<p>Lean too far into game mechanics and learners optimise for the badge: racing through tasks, collecting XP, understanding none of the hard parts. Lean too far into rigour and it reads like documentation, motivation collapses, and they churn in week one.</p>
 					</div>
@@ -108,13 +108,13 @@
 					<div class="decision">
 						<span class="tag">Decision 01</span>
 						<h3>Reward the work, not the tapping</h3>
-						<p>XP attaches to things that require actual understanding — completing a lesson, passing a chapter quiz, finishing a challenge, making a real deployment — rather than to opening the app or scrolling a page. The daily streak measures showing up, which is the habit worth building, but it never substitutes for progress: the profile tracks <strong>Rust, Solana Programs, Anchor Framework and Token Standards as separate skill levels</strong>, so a long streak with shallow knowledge has nowhere to hide.</p>
+						<p>XP attaches to things that require actual understanding, completing a lesson, passing a chapter quiz, finishing a challenge, making a real deployment, rather than to opening the app or scrolling a page. The daily streak measures showing up, which is the habit worth building, but it never substitutes for progress: the profile tracks <strong>Rust, Solana Programs, Anchor Framework and Token Standards as separate skill levels</strong>, so a long streak with shallow knowledge has nowhere to hide.</p>
 					</div>
 
 					<div class="decision">
 						<span class="tag">Decision 02</span>
 						<h3>One next action, always</h3>
-						<p>The home screen answers a single question: what do I do today? A progress card carries the day's XP, lessons and challenge counts, and one primary button — <strong>Complete Today's task</strong>. Underneath it, today's challenge is already chosen, sized ("50 XP · 15 min") and described in a sentence. The decision of what to learn next — the thing that stalls self-taught learners — is made by the app, not the person.</p>
+						<p>The home screen answers a single question: what do I do today? A progress card carries the day's XP, lessons and challenge counts, and one primary button, <strong>Complete Today's task</strong>. Underneath it, today's challenge is already chosen, sized ("50 XP · 15 min") and described in a sentence. The decision of what to learn next, the thing that stalls self-taught learners, is made by the app, not the person.</p>
 					</div>
 
 					<div class="decision">
@@ -126,47 +126,47 @@
 
 				<section id="structure">
 					<h2>Structuring the path</h2>
-					<p>Courses are organised as <strong>learning paths</strong> with an explicit difficulty ladder — Solana Fundamentals (Beginner), Anchor Framework (Intermediate), Advanced Programs &amp; Architecture, then DeFi Development Mastery (Expert). Each path shows its lesson count, time commitment and a progress bar before you commit to it.</p>
-					<p>Two details do a lot of work here. Showing <strong>"12 lessons · 2h 30min"</strong> up front makes the investment honest, which matters for learners who have been burned by tutorials that trail off. And keeping partially-complete paths visibly in progress — rather than resetting them — makes returning after a gap feel like resuming rather than restarting.</p>
+					<p>Courses are organised as <strong>learning paths</strong> with an explicit difficulty ladder, Solana Fundamentals (Beginner), Anchor Framework (Intermediate), Advanced Programs &amp; Architecture, then DeFi Development Mastery (Expert). Each path shows its lesson count, time commitment and a progress bar before you commit to it.</p>
+					<p>Two details do a lot of work here. Showing <strong>"12 lessons · 2h 30min"</strong> up front makes the investment honest, which matters for learners who have been burned by tutorials that trail off. And keeping partially-complete paths visibly in progress, rather than resetting them, makes returning after a gap feel like resuming rather than restarting.</p>
 
 					<div class="media-pair">
 						<figure>
 							<img src="../../assets/images/slean/home.jpg" alt="Slean home screen with a progress card, daily streak and today's challenge" width="780" height="1688" loading="lazy">
-							<figcaption>Home — one clear next action.</figcaption>
+							<figcaption>Home, one clear next action.</figcaption>
 						</figure>
 						<figure>
 							<img src="../../assets/images/slean/paths.jpg" alt="Learning Paths screen listing Solana Fundamentals, Anchor Framework, Advanced Programs and DeFi Development Mastery with difficulty badges" width="780" height="1688" loading="lazy">
-							<figcaption>Paths — difficulty, length and progress before you commit.</figcaption>
+							<figcaption>Paths, difficulty, length and progress before you commit.</figcaption>
 						</figure>
 					</div>
 				</section>
 
 				<section id="feedback">
 					<h2>Feedback that teaches</h2>
-					<p>Quizzes sit between chapters, and their job isn't scoring — it's catching a misunderstanding before it compounds into a broken deployment. Right and wrong answers are colour-coded immediately, and <strong>both</strong> outcomes open an explanation panel. Getting it wrong isn't a dead end with a retry button; it's where the actual teaching happens.</p>
+					<p>Quizzes sit between chapters, and their job isn't scoring, it's catching a misunderstanding before it compounds into a broken deployment. Right and wrong answers are colour-coded immediately, and <strong>both</strong> outcomes open an explanation panel. Getting it wrong isn't a dead end with a retry button; it's where the actual teaching happens.</p>
 
 					<div class="media-pair">
 						<figure>
 							<img src="../../assets/images/slean/quiz-correct.jpg" alt="Chapter quiz with the correct answer highlighted in teal" width="780" height="1170" loading="lazy">
-							<figcaption>Correct — confirmed, then explained.</figcaption>
+							<figcaption>Correct, confirmed, then explained.</figcaption>
 						</figure>
 						<figure>
 							<img src="../../assets/images/slean/quiz-wrong.jpg" alt="Chapter quiz with an incorrect answer highlighted in red" width="780" height="1170" loading="lazy">
-							<figcaption>Wrong — corrected in place, not punished.</figcaption>
+							<figcaption>Wrong, corrected in place, not punished.</figcaption>
 						</figure>
 					</div>
 
-					<p>The profile closes the loop. Skill bars per topic, a streak calendar, a longest-streak record and a <strong>Share Profile</strong> action turn scattered study into something a learner can point at — which, for a self-taught developer with no credential to show, is part of the value of finishing at all.</p>
+					<p>The profile closes the loop. Skill bars per topic, a streak calendar, a longest-streak record and a <strong>Share Profile</strong> action turn scattered study into something a learner can point at, which, for a self-taught developer with no credential to show, is part of the value of finishing at all.</p>
 
 					<figure class="media media--phone">
 						<img src="../../assets/images/slean/profile.jpg" alt="Slean profile showing level, XP, streak, per-skill progress bars and a streak calendar" width="780" height="2100" loading="lazy">
-						<figcaption>Profile — proof of work, per skill.</figcaption>
+						<figcaption>Profile, proof of work, per skill.</figcaption>
 					</figure>
 				</section>
 
 				<section id="outcomes">
 					<h2>What it achieved</h2>
-					<p>Balancing the two pulls — layered core learning, optional quests, real deployments, adaptive branching and human feedback — produced results across four areas:</p>
+					<p>Balancing the two pulls, layered core learning, optional quests, real deployments, adaptive branching and human feedback, produced results across four areas:</p>
 					<ul>
 						<li><strong>Deeper mastery.</strong> Learners who completed core modules plus bonus quests made noticeably fewer deployment errors, and understood Solana's transaction and account models better, than those who did core content alone.</li>
 						<li><strong>More confidence.</strong> After peer and mentor review, learners reported being more comfortable writing secure Solana programs, debugging contracts and deploying to testnet.</li>
@@ -180,7 +180,7 @@
 
 		<div class="cs-next">
 			<a href="../index.html"><span>Back to</span>All work</a>
-			<a href="../ultraprop/index.html"><span>Next</span>UltraProp ›</a>
+			<a href="../northstar/index.html"><span>Next</span>NorthStar Surgery ›</a>
 		</div>
 	</div>
 </main>
@@ -202,10 +202,9 @@
 			</div>
 		</div>
 		<div class="footer-legal">
-			<a href="../../policies/index.html">Policies, Terms and Conditions</a>
 			<a href="../../services/index.html">Services</a>
 		</div>
-		<p class="footer-note">© Samuel Akinbode — iamtomiwa.xyz</p>
+		<p class="footer-note">© Samuel Akinbode, iamtomiwa.xyz</p>
 	</div>
 </footer>
 

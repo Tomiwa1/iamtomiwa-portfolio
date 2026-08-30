@@ -13,7 +13,6 @@
 	var MARK = 'legal-links-row';
 
 	var LINKS = [
-		['Policies, Terms and Conditions', 'policies/index.html'],
 		['Services', 'services/index.html']
 	];
 
