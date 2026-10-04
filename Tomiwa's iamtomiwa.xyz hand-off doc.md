@@ -21,7 +21,7 @@ repo and have never seen it before.
 
 A personal portfolio site for a product designer and design engineer, live at
 iamtomiwa.xyz. It began as an export from Framer, and most of what matters now
-is hand-written HTML sitting alongside that export. Seven project case studies,
+is hand-written HTML sitting alongside that export. Eight project case studies,
 a services page, and an about page.
 
 **Stop here if** you only needed to know what the site is.
@@ -59,7 +59,7 @@ changing how a page looks.
 ## Level 2 · What the site contains
 
 The site is organised around **Works**, which is the point of the whole thing.
-Seven projects, in this deliberate order, which the owner set personally:
+Eight projects, in this deliberate order, which the owner set personally:
 
 | Order | Project | What it is | URL |
 |---|---|---|---|
@@ -70,6 +70,7 @@ Seven projects, in this deliberate order, which the owner set personally:
 | 5 | UltraProp | On-chain crypto prop-trading firm | `/works/ultraprop/` |
 | 6 | Lydus | Self-initiated DeFi trading concept | `/works/lydus/` |
 | 7 | Slean | Gamified Solana learning app | `/works/slean/` |
+| 8 | Octant | Project registry for public-goods funding | `/works/octant/` |
 
 Navigation is exactly four items: **Works, About, Services, Contact**. A Case
 Studies section used to exist and was archived deliberately, do not reinstate it.
@@ -309,9 +310,9 @@ wrong after the move to Newcastle.
 The **résumé master file is out of sync with what is published**. The hosted PDF
 at `/assets/docs/Tomiwa-Akinbode-Resume.pdf` was corrected so the 6H entry reads
 *Web Designer & Developer, Jul 2022* and the contact address is
-`tomiwa1.dev@gmail.com`, matching the reference letter and the site. The source
+the published portfolio contact address, matching the reference letter and the site. The source
 `.docx` in `~/Downloads` still says *Technical Product Owner / Product Designer,
-Jun 2022* and `oluwatomiwaakinbode@gmail.com`. Sending that file to anyone
+Jun 2022* and an outdated personal email address. Sending that file to anyone
 contradicts the site. This was flagged and not yet resolved.
 
 **Fuse Wallet Android** is unfinished business. Its page is still the original
@@ -332,6 +333,50 @@ not worth the risk of changing a look he likes. That decision is recorded, not
 closed.
 
 ### What the previous session was about to do
+
+### Octant addition · 4 October 2026
+
+Octant is now added locally at `/works/octant/`, and as the eighth card on the
+homepage and Works listing. The existing seven-project order is preserved.
+The owner authorized publishing this addition to GitHub Pages on 4 October 2026.
+
+- Full Figma mockup: https://www.figma.com/design/5pvfrrnoESjfK28sUYK8vb/My-LLms-Cooking.?node-id=0-1
+- Application flow: node `29:13004` in the same file.
+- Registry / Atlas: node `41:710839` in the same file.
+- Live product: https://octant.app/dashboard/projects
+
+Use the owner’s connected student Figma account for this file. Access was
+verified. The other connected account sees a request-access screen. The local
+bridge was unavailable. Account identifiers are intentionally omitted from
+this repository handoff.
+
+The owner confirmed **Product Designer**, **2026**, and the actual brief:
+Octant was working on multiple products and needed design support to build its
+project registry. The registry lets visitors discover projects, funding rounds,
+and the Dragons curating them, with available funding, distributed funding,
+and ecosystem activity. Do not frame this as repairing a broken existing flow.
+
+The owner wants a strongly visual portfolio entry to attract clients and apply
+for jobs. The page now uses a desktop/mobile registry hero, large paired project,
+Dragon, round, and project-detail screens, then an application-flow gallery.
+All ten PNGs are direct exports from the supplied Figma file, saved under
+`assets/images/octant/`. Each screen links to its full-size image. Numbers
+inside mockups are sample interface content, not outcome metrics.
+
+Role, period, scope, brief, and observed design structure are filled in. Visible
+copy placeholders have been removed. The owner confirmed he delivered the
+designs following Octant’s existing design system, and Octant approved and
+used them. This is stated in the metadata and closing delivery section. No
+numerical outcome metrics or engineering contribution are claimed.
+
+Styles are isolated in `assets/css/octant.css?v=3`. `works-cards.js` is pinned
+at `v=12` on every referencing page, including archived pages. Desktop (1440px)
+and mobile (390px) were checked: all images load, columns adapt, and neither
+layout overflows horizontally. Local image/navigation references and
+`git diff --check` pass. The existing placeholder checker passes for its
+configured pages; it does not track Octant.
+
+### Previous handoff state
 
 Nothing was in flight. The last substantive change, rebuilding the Works listing
 as real HTML, was committed as `3cbe8e6` and verified live. The version-pin

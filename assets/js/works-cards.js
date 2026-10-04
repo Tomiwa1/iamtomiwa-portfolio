@@ -90,6 +90,15 @@
 		mark: 'northstar-card'
 	});
 
+	// Octant follows the existing projects while its case study is in progress.
+	INSERTIONS.push({
+		after: 'slean-card',
+		title: 'Octant',
+		href: 'works/octant/index.html',
+		image: 'assets/images/octant/registry.png',
+		mark: 'octant-card'
+	});
+
 	var ALL_MARKS = REPLACEMENTS.concat(INSERTIONS).map(function (s) { return s.mark; });
 
 	// "./works/some-slug" or "./case-studies/some-slug" -> a path that actually exists
