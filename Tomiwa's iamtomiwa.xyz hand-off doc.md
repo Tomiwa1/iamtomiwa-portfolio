@@ -8,7 +8,9 @@ live: https://iamtomiwa.xyz
 description: Portfolio site for Samuel (Tomiwa) Akinbode, a Framer export being progressively replaced with hand-built static pages. Written for the next AI session picking this up cold.
 ---
 
-# Handoff · iamtomiwa.xyz
+# Tomiwa's iamtomiwa.xyz hand-off doc
+
+https://iamtomiwa.xyz
 
 **Read this layer if…** you are an AI session or developer about to touch this
 repo and have never seen it before.
