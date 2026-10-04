@@ -80,8 +80,7 @@
 		mark: 'sixh-card'
 	});
 
-	// NorthStar leads the grid — inserted before Klærus rather than displacing a
-	// tile, giving the order NorthStar, Klærus, Cortex, UltraProp, Lydus, Slean.
+	// NorthStar sits before Klærus; Octant is inserted ahead of it below.
 	INSERTIONS.push({
 		before: 'klaerus-card',
 		title: 'NorthStar Surgery',
@@ -90,9 +89,9 @@
 		mark: 'northstar-card'
 	});
 
-	// Octant follows the existing projects while its case study is in progress.
+	// Octant leads the grid, followed by the existing project order.
 	INSERTIONS.push({
-		after: 'slean-card',
+		before: 'northstar-card',
 		title: 'Octant',
 		href: 'works/octant/index.html',
 		image: 'assets/images/octant/registry.png',

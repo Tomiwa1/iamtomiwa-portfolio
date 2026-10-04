@@ -63,14 +63,14 @@ Eight projects, in this deliberate order, which the owner set personally:
 
 | Order | Project | What it is | URL |
 |---|---|---|---|
-| 1 | NorthStar Surgery | Austin surgical practice, SEO/design engineering | `/works/northstar/` |
-| 2 | Klærus | Probability perpetuals protocol on Arbitrum | `/works/klaerus/` |
-| 3 | 6H Agency | Cologne native-advertising agency, 2022 | `/works/6h-agency/` |
-| 4 | Cortex | Sovereign AI memory layer on Sui | `/works/cortex/` |
-| 5 | UltraProp | On-chain crypto prop-trading firm | `/works/ultraprop/` |
-| 6 | Lydus | Self-initiated DeFi trading concept | `/works/lydus/` |
-| 7 | Slean | Gamified Solana learning app | `/works/slean/` |
-| 8 | Octant | Project registry for public-goods funding | `/works/octant/` |
+| 1 | Octant | Project registry for public-goods funding | `/works/octant/` |
+| 2 | NorthStar Surgery | Austin surgical practice, SEO/design engineering | `/works/northstar/` |
+| 3 | Klærus | Probability perpetuals protocol on Arbitrum | `/works/klaerus/` |
+| 4 | 6H Agency | Cologne native-advertising agency, 2022 | `/works/6h-agency/` |
+| 5 | Cortex | Sovereign AI memory layer on Sui | `/works/cortex/` |
+| 6 | UltraProp | On-chain crypto prop-trading firm | `/works/ultraprop/` |
+| 7 | Lydus | Self-initiated DeFi trading concept | `/works/lydus/` |
+| 8 | Slean | Gamified Solana learning app | `/works/slean/` |
 
 Navigation is exactly four items: **Works, About, Services, Contact**. A Case
 Studies section used to exist and was archived deliberately, do not reinstate it.
@@ -336,8 +336,9 @@ closed.
 
 ### Octant addition · 4 October 2026
 
-Octant is now added locally at `/works/octant/`, and as the eighth card on the
-homepage and Works listing. The existing seven-project order is preserved.
+Octant is now added locally at `/works/octant/`, and as the first card on the
+homepage and Works listing, at the owner’s request. The prior seven projects
+follow in their existing relative order.
 The owner authorized publishing this addition to GitHub Pages on 4 October 2026.
 
 - Full Figma mockup: https://www.figma.com/design/5pvfrrnoESjfK28sUYK8vb/My-LLms-Cooking.?node-id=0-1
@@ -370,7 +371,7 @@ used them. This is stated in the metadata and closing delivery section. No
 numerical outcome metrics or engineering contribution are claimed.
 
 Styles are isolated in `assets/css/octant.css?v=3`. `works-cards.js` is pinned
-at `v=12` on every referencing page, including archived pages. Desktop (1440px)
+at `v=13` on every referencing page, including archived pages. Desktop (1440px)
 and mobile (390px) were checked: all images load, columns adapt, and neither
 layout overflows horizontally. Local image/navigation references and
 `git diff --check` pass. The existing placeholder checker passes for its
